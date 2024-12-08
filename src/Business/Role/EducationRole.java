@@ -17,9 +17,9 @@ import UserInterface.EducationRole.EducationDepartmentWorkAreaJPanel;
  *
  * @author sthavir
  */
-public class EducationRole {
+public class EducationRole extends Role{
     
-     @Override
+    @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise,Network network, EcoSystem business) {
         return new EducationDepartmentWorkAreaJPanel(userProcessContainer, account, (EducationOrganization)organization,enterprise, network);
     }
@@ -28,5 +28,6 @@ public class EducationRole {
     public String toString() {
         return RoleType.Education.getValue();
     }
+    
     
 }

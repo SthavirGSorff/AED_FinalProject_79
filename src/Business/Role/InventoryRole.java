@@ -19,9 +19,9 @@ import UserInterface.InventoryRole.InventoryDepartmentWorkAreaJPanel;
  *
  * @author sthavir
  */
-public class InventoryRole {
+public class InventoryRole extends Role {
     
-    @Override
+     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise,Network network, EcoSystem business) {
         return new InventoryDepartmentWorkAreaJPanel(userProcessContainer, account, (InventoryOrganization)organization, enterprise,network);
     }

@@ -12,7 +12,7 @@ import java.util.Map;
  *
  * @author sthavir
  */
-public class Volunteer {
+public class Volunteer extends Employee{
     
     private String address = null;
     private String city = null;
@@ -121,6 +121,5 @@ public class Volunteer {
 
     public void setEducationMap(Map<String, String> educationMap) {
         this.educationMap = educationMap;
-    }
-    
+    } 
 }

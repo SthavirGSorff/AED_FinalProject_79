@@ -17,8 +17,8 @@ import UserInterface.PharmacistRole.PharmacistWorkAreaJPanel;
  *
  * @author sthavir
  */
-public class PharmacistRole {
-    
+public class PharmacistRole extends Role{
+
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, EcoSystem business) {
         return new PharmacistWorkAreaJPanel(userProcessContainer,account,(PharmacyOrganization)organization,network,enterprise);
@@ -28,5 +28,6 @@ public class PharmacistRole {
     public String toString() {
         return RoleType.Pharmacy.getValue();
     }
+    
     
 }
