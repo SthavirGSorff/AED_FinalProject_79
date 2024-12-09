@@ -6,7 +6,7 @@ package UserInterface;
 
 /**
  *
- * @author poojaraghu
+ * @author vinaypawar
  */
 public class LogoutJPanel extends javax.swing.JPanel {
 
@@ -26,29 +26,33 @@ public class LogoutJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        container1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
-        setPreferredSize(new java.awt.Dimension(731, 341));
+        container1.setBackground(new java.awt.Color(180, 195, 195));
+        container1.setLayout(new java.awt.CardLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/NGO.png"))); // NOI18N
+        container1.add(jLabel2, "card2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 47, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1092, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(238, 238, 238)
+                .addComponent(container1, javax.swing.GroupLayout.PREFERRED_SIZE, 1288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 662, Short.MAX_VALUE)
-                .addContainerGap())
-        
+            .addComponent(container1, javax.swing.GroupLayout.PREFERRED_SIZE, 765, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel container1;
+    private javax.swing.JLabel jLabel2;
+    // End of variables declaration//GEN-END:variables
 }
