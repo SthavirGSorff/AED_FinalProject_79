@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UserInterface.VolunteerRole;
 
@@ -40,6 +41,9 @@ import UserInterface.SystemAdminWorkArea.ManageEnterpriseAdminJPanel;
  * @author sthavir
  */
 public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
+    /**
+     * Creates new form VolunteerWorkAreaJPanel
+     */
     
     private JPanel userProcessContainer;
     private EcoSystem business;
@@ -51,10 +55,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
     private ArrayList<String> categoryList;
     private ArrayList<Integer> quantityList;
     private ArrayList<String> descriptionList;
-
-    /**
-     * Creates new form VolunteerWorkAreaJPanel
-     */
+    
     public VolunteerWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization,  EcoSystem business, Enterprise enterprise, Network network) {
         initComponents();
         
@@ -72,6 +73,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         populateAssignedTable();
         populateTable(); 
         populateUserDetails();
+        
     }
     
     public void populateAssignedTable(){
@@ -202,6 +204,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         numberOfVolunteersJTextField1 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
+        volunteeringDate1 = new com.toedter.calendar.JDateChooser();
         Date date = new Date();
         SpinnerDateModel sm1 = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         volunteeringTime1 = new javax.swing.JSpinner(sm1);
@@ -212,11 +215,11 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel27 = new javax.swing.JLabel();
         areaJTextField1 = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        volunteeringDate1 = new com.toedter.calendar.JDateChooser();
         TasksJPanel = new javax.swing.JPanel();
         numberOfVolunteersJTextField = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         numberOfHoursJTextField = new javax.swing.JTextField();
+        volunteeringDate = new com.toedter.calendar.JDateChooser();
         jLabel14 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         SpinnerDateModel sm = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
@@ -239,7 +242,6 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         areaJTextField = new javax.swing.JTextField();
-        volunteeringDate = new com.toedter.calendar.JDateChooser();
         DonateJPanel = new javax.swing.JPanel();
         txtQuantity = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -262,7 +264,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
 
-        VolunteerJTabbedPane.setBackground(new java.awt.Color(255, 204, 204));
+        VolunteerJTabbedPane.setBackground(new java.awt.Color(180, 195, 195));
         VolunteerJTabbedPane.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         VolunteerJTabbedPane.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -272,7 +274,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
 
         HomePageJPanel.setLayout(new java.awt.BorderLayout());
 
-        leftJPanel.setBackground(new java.awt.Color(255, 204, 204));
+        leftJPanel.setBackground(new java.awt.Color(180, 195, 195));
         leftJPanel.setToolTipText("");
 
         ageTextJField.setEditable(false);
@@ -427,13 +429,12 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(updateDetailsJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(459, Short.MAX_VALUE))
+                .addContainerGap(416, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(leftJPanel);
 
-        rightJPanel.setBackground(new java.awt.Color(255, 204, 204));
-        rightJPanel.setPreferredSize(new java.awt.Dimension(746, 924));
+        rightJPanel.setBackground(new java.awt.Color(180, 195, 195));
 
         assignedRequestsJTable.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 13)); // NOI18N
         assignedRequestsJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -518,6 +519,9 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel23.setText("Requirements:");
 
+        volunteeringDate1.setEnabled(false);
+        volunteeringDate1.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+
         cancelJButton.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         cancelJButton.setText("Cancel Request");
         cancelJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -545,9 +549,6 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel28.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 15)); // NOI18N
         jLabel28.setText("My Tasks");
 
-        volunteeringDate1.setEnabled(false);
-        volunteeringDate1.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
-
         javax.swing.GroupLayout rightJPanelLayout = new javax.swing.GroupLayout(rightJPanel);
         rightJPanel.setLayout(rightJPanelLayout);
         rightJPanelLayout.setHorizontalGroup(
@@ -555,7 +556,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             .addComponent(jSeparator2)
             .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(rightJPanelLayout.createSequentialGroup()
-                .addContainerGap(91, Short.MAX_VALUE)
+                .addContainerGap(98, Short.MAX_VALUE)
                 .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(rightJPanelLayout.createSequentialGroup()
@@ -589,10 +590,10 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                                 .addComponent(numberOfStudentsJTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(placeJTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(volunteeringTime1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(volunteeringDate1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jobTitleJTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(areaJTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
-                                .addComponent(volunteeringDate1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(165, Short.MAX_VALUE))
+                                .addComponent(areaJTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         rightJPanelLayout.setVerticalGroup(
             rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -624,29 +625,29 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
-                            .addComponent(placeJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(areaJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel27))
-                        .addGap(17, 17, 17)
-                        .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numberOfStudentsJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numberOfHoursJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel22)
-                            .addComponent(numberOfVolunteersJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel23)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(placeJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(volunteeringDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(areaJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel27))
+                .addGap(17, 17, 17)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfStudentsJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfHoursJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(numberOfVolunteersJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel23)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(222, Short.MAX_VALUE))
         );
 
         JSpinner.DateEditor de1 = new JSpinner.DateEditor(volunteeringTime1, "HH:mm");
@@ -659,7 +660,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
 
         VolunteerJTabbedPane.addTab("Home Page", HomePageJPanel);
 
-        TasksJPanel.setBackground(new java.awt.Color(255, 204, 204));
+        TasksJPanel.setBackground(new java.awt.Color(180, 195, 195));
 
         numberOfVolunteersJTextField.setEditable(false);
         numberOfVolunteersJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
@@ -675,6 +676,9 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                 numberOfHoursJTextFieldActionPerformed(evt);
             }
         });
+
+        volunteeringDate.setEnabled(false);
+        volunteeringDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
 
         jLabel14.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         jLabel14.setText("Time: ");
@@ -778,16 +782,13 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        volunteeringDate.setEnabled(false);
-        volunteeringDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-
         javax.swing.GroupLayout TasksJPanelLayout = new javax.swing.GroupLayout(TasksJPanel);
         TasksJPanel.setLayout(TasksJPanelLayout);
         TasksJPanelLayout.setHorizontalGroup(
             TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TasksJPanelLayout.createSequentialGroup()
-                .addContainerGap(233, Short.MAX_VALUE)
+                .addContainerGap(166, Short.MAX_VALUE)
                 .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -802,14 +803,14 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                        .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(numberOfHoursJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(areaJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(volunteeringTime, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(volunteeringDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                         .addComponent(jobTitleJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(placeJTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(volunteeringDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)))
+                        .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addGap(439, 439, 439))
             .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(TasksJPanelLayout.createSequentialGroup()
@@ -840,43 +841,42 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                     .addComponent(jobTitleJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TasksJPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel13)
-                        .addGap(14, 14, 14)
-                        .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(volunteeringTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(placeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(areaJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel26))
-                        .addGap(11, 11, 11)
-                        .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numberOfHoursJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
-                            .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel13)
                     .addComponent(volunteeringDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(volunteeringTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(placeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(areaJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel26))
+                .addGap(11, 11, 11)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfHoursJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(221, Short.MAX_VALUE))
         );
 
         VolunteerJTabbedPane.addTab("New Tasks", TasksJPanel);
 
-        DonateJPanel.setBackground(new java.awt.Color(255, 204, 204));
+        DonateJPanel.setBackground(new java.awt.Color(180, 195, 195));
         DonateJPanel.setPreferredSize(new java.awt.Dimension(3043, 1021));
 
         txtQuantity.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
@@ -1064,7 +1064,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(VolunteerJTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1125, Short.MAX_VALUE)
+            .addComponent(VolunteerJTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1113, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1072,34 +1072,139 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void updateDetailsJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDetailsJButtonActionPerformed
-        UpdateVolunteerDeatilsJPanel manageEnterpriseAdminJPanel=new UpdateVolunteerDeatilsJPanel(userProcessContainer,userAccount);
-        userProcessContainer.add("manageEnterpriseAdminJPanel",manageEnterpriseAdminJPanel);
-        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_updateDetailsJButtonActionPerformed
-
-    private void nationalityTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nationalityTextJFieldActionPerformed
+    private void VolunteerJTabbedPaneStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_VolunteerJTabbedPaneStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_nationalityTextJFieldActionPerformed
+    }//GEN-LAST:event_VolunteerJTabbedPaneStateChanged
 
-    private void emailIdTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailIdTextJFieldActionPerformed
+    private void numberOfHoursJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfHoursJTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailIdTextJFieldActionPerformed
+    }//GEN-LAST:event_numberOfHoursJTextFieldActionPerformed
 
     private void contactTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactTextJFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_contactTextJFieldActionPerformed
 
-    private void btnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoryActionPerformed
+    private void emailIdTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailIdTextJFieldActionPerformed
         // TODO add your handling code here:
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("OrderHistoryJPanel", new OrderHistoryJPanel(userProcessContainer, userAccount, enterprise));
+    }//GEN-LAST:event_emailIdTextJFieldActionPerformed
+
+    private void nationalityTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nationalityTextJFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nationalityTextJFieldActionPerformed
+
+    private void updateDetailsJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDetailsJButtonActionPerformed
+        UpdateVolunteerDetailsJPanel manageEnterpriseAdminJPanel=new UpdateVolunteerDetailsJPanel(userProcessContainer,userAccount);
+        userProcessContainer.add("manageEnterpriseAdminJPanel",manageEnterpriseAdminJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnHistoryActionPerformed
+    }//GEN-LAST:event_updateDetailsJButtonActionPerformed
+
+    private void refreshTestJButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButton2ActionPerformed
+
+        populateAssignedTable();
+
+    }//GEN-LAST:event_refreshTestJButton2ActionPerformed
+
+    private void numberOfHoursJTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfHoursJTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numberOfHoursJTextField1ActionPerformed
+
+    private void cancelJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelJButtonActionPerformed
+        
+        int selectedRow = assignedRequestsJTable.getSelectedRow();
+        if(selectedRow>=0){
+            int selectionButton = JOptionPane.YES_NO_OPTION;
+            int selectionResult = JOptionPane.showConfirmDialog(null, "Are you sure you want to Cancel this request??","Warning",selectionButton);
+            if(selectionResult == JOptionPane.YES_OPTION){
+                EducationVolunteerWorkRequest request = (EducationVolunteerWorkRequest) assignedRequestsJTable.getValueAt(selectedRow, 0);
+                
+                if(request.getDate().before(new Date())){
+                    JOptionPane.showMessageDialog(null, "Request can't be cancelled, since request has past date.");
+                }
+                
+                userAccount.getWorkQueue().getWorkRequestList().remove(request);
+                request.getUsersList().remove(userAccount);
+                int currentVac = request.getCurrentVacancy();
+                request.setCurrentVacancy(currentVac + 1);
+
+                populateTable();
+                populateAssignedTable(); 
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Please select a Row!!");
+        }
+    }//GEN-LAST:event_cancelJButtonActionPerformed
+
+    private void refreshTestJButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButton3ActionPerformed
+        populateTable();
+    }//GEN-LAST:event_refreshTestJButton3ActionPerformed
+
+    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
+        
+         int selectedRow = newTasksJTable.getSelectedRow();
+
+        if (selectedRow < 0){
+            JOptionPane.showConfirmDialog(null, "Please select a row from table to Assign Request!","Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        } else{
+
+            EducationVolunteerWorkRequest request = (EducationVolunteerWorkRequest)newTasksJTable.getValueAt(selectedRow, 0);
+
+            boolean isAlreadyAssigned = userAccount.checkDuplicates(request);
+
+            if(isAlreadyAssigned == true){
+                JOptionPane.showMessageDialog(null, "Volunteer Request Already Assigned.");
+                return;
+            }
+            
+            List<WorkRequest> requestList = new ArrayList<WorkRequest>();
+            requestList = userAccount.getWorkQueue().getWorkRequestList();
+            
+            for(WorkRequest r: requestList){
+                if(r instanceof EducationVolunteerWorkRequest){
+                    EducationVolunteerWorkRequest request1 = (EducationVolunteerWorkRequest)r;
+                    SimpleDateFormat formatter = new SimpleDateFormat("dd MMM, yyyy");
+                    String request1Date = formatter.format(request1.getDate());
+                    String requestDate = formatter.format(request.getDate());
+                    if(request1Date.equals(requestDate)){
+                        JOptionPane.showMessageDialog(null, "You already have a task on that day. Please select a task with another date.");
+                        return;
+                    }   
+                }
+            }
+
+            if(isAlreadyAssigned == false){
+                request.setReceiver(userAccount);
+                int vacancy = request.getCurrentVacancy();
+                request.setCurrentVacancy(vacancy-1);
+                if(request.getCurrentVacancy()== 0){
+                    request.setStatus("Completed");
+                } else {
+                    request.setStatus("Pending");
+                }
+                userAccount.getWorkQueue().getWorkRequestList().add(request);
+                request.getUsersList().add(userAccount);
+                JOptionPane.showMessageDialog(null, "Volunteer Request Assigned Successfully!"); 
+            }
+        }
+
+        populateTable();
+        populateAssignedTable();
+        
+        jobTitleJTextField.setText("");
+        volunteeringDate.setDate(new Date());
+        volunteeringTime.setValue("");
+        numberOfHoursJTextField.setText("");
+        numberOfVolunteersJTextField.setText("");
+        requirementsJTextArea.setText("");
+        placeJTextField.setText("");
+        areaJTextField.setText("");
+        numberOfStudentsJTextField1.setText("");
+        
+    }//GEN-LAST:event_assignJButtonActionPerformed
 
     private void assignedRequestsJTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_assignedRequestsJTableMouseClicked
-
+        
         int selectedRow = assignedRequestsJTable.getSelectedRow();
         if(selectedRow<0){
             JOptionPane.showConfirmDialog(null, "Please select a row from table to view details.!","Warning", JOptionPane.WARNING_MESSAGE);
@@ -1126,51 +1231,12 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             placeJTextField1.setText(wr.getPlace());
             areaJTextField1.setText(wr.getArea());
             numberOfStudentsJTextField1.setText(String.valueOf(wr.getNumberOfStudents()));
-
+            
         }
     }//GEN-LAST:event_assignedRequestsJTableMouseClicked
 
-    private void refreshTestJButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButton2ActionPerformed
-
-        populateAssignedTable();
-    }//GEN-LAST:event_refreshTestJButton2ActionPerformed
-
-    private void numberOfHoursJTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfHoursJTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numberOfHoursJTextField1ActionPerformed
-
-    private void cancelJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelJButtonActionPerformed
-
-        int selectedRow = assignedRequestsJTable.getSelectedRow();
-        if(selectedRow>=0){
-            int selectionButton = JOptionPane.YES_NO_OPTION;
-            int selectionResult = JOptionPane.showConfirmDialog(null, "Are you sure you want to Cancel this request??","Warning",selectionButton);
-            if(selectionResult == JOptionPane.YES_OPTION){
-                EducationVolunteerWorkRequest request = (EducationVolunteerWorkRequest) assignedRequestsJTable.getValueAt(selectedRow, 0);
-
-                if(request.getDate().before(new Date())){
-                    JOptionPane.showMessageDialog(null, "Request can't be cancelled, since request has past date.");
-                }
-
-                userAccount.getWorkQueue().getWorkRequestList().remove(request);
-                request.getUsersList().remove(userAccount);
-                int currentVac = request.getCurrentVacancy();
-                request.setCurrentVacancy(currentVac + 1);
-
-                populateTable();
-                populateAssignedTable();
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Please select a Row!!");
-        }
-    }//GEN-LAST:event_cancelJButtonActionPerformed
-
-    private void numberOfHoursJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfHoursJTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numberOfHoursJTextFieldActionPerformed
-
     private void newTasksJTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newTasksJTableMouseClicked
-        int selectedRow = newTasksJTable.getSelectedRow();
+       int selectedRow = newTasksJTable.getSelectedRow();
         if(selectedRow<0){
             JOptionPane.showConfirmDialog(null, "Please select a row from table to View Details.!","Warning", JOptionPane.WARNING_MESSAGE);
         }
@@ -1201,89 +1267,17 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_newTasksJTableMouseClicked
 
-    private void refreshTestJButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButton3ActionPerformed
-        populateTable();
-    }//GEN-LAST:event_refreshTestJButton3ActionPerformed
-
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
-
-        int selectedRow = newTasksJTable.getSelectedRow();
-
-        if (selectedRow < 0){
-            JOptionPane.showConfirmDialog(null, "Please select a row from table to Assign Request!","Warning", JOptionPane.WARNING_MESSAGE);
-            return;
-        } else{
-
-            EducationVolunteerWorkRequest request = (EducationVolunteerWorkRequest)newTasksJTable.getValueAt(selectedRow, 0);
-
-            boolean isAlreadyAssigned = userAccount.checkDuplicates(request);
-
-            if(isAlreadyAssigned == true){
-                JOptionPane.showMessageDialog(null, "Volunteer Request Already Assigned.");
-                return;
-            }
-
-            List<WorkRequest> requestList = new ArrayList<WorkRequest>();
-            requestList = userAccount.getWorkQueue().getWorkRequestList();
-
-            for(WorkRequest r: requestList){
-                if(r instanceof EducationVolunteerWorkRequest){
-                    EducationVolunteerWorkRequest request1 = (EducationVolunteerWorkRequest)r;
-                    SimpleDateFormat formatter = new SimpleDateFormat("dd MMM, yyyy");
-                    String request1Date = formatter.format(request1.getDate());
-                    String requestDate = formatter.format(request.getDate());
-                    if(request1Date.equals(requestDate)){
-                        JOptionPane.showMessageDialog(null, "You already have a task on that day. Please select a task with another date.");
-                        return;
-                    }
-                }
-            }
-
-            if(isAlreadyAssigned == false){
-                request.setReceiver(userAccount);
-                int vacancy = request.getCurrentVacancy();
-                request.setCurrentVacancy(vacancy-1);
-                if(request.getCurrentVacancy()== 0){
-                    request.setStatus("Completed");
-                } else {
-                    request.setStatus("Pending");
-                }
-                userAccount.getWorkQueue().getWorkRequestList().add(request);
-                request.getUsersList().add(userAccount);
-                JOptionPane.showMessageDialog(null, "Volunteer Request Assigned Successfully!");
-            }
-        }
-
-        populateTable();
-        populateAssignedTable();
-
-        jobTitleJTextField.setText("");
-        volunteeringDate.setDate(new Date());
-        volunteeringTime.setValue("");
-        numberOfHoursJTextField.setText("");
-        numberOfVolunteersJTextField.setText("");
-        requirementsJTextArea.setText("");
-        placeJTextField.setText("");
-        areaJTextField.setText("");
-        numberOfStudentsJTextField1.setText("");
-
-    }//GEN-LAST:event_assignJButtonActionPerformed
-
-    private void areaJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areaJTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_areaJTextFieldActionPerformed
-
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-
+        
         String description="";
-
+        
         String quantityText = txtQuantity.getText();
         if(quantityText==null || quantityText.equals("")){
             JOptionPane.showMessageDialog(null,"Please enter quantity !");
             return;
         }
-
+        
         try{
             Integer.parseInt(txtQuantity.getText());
         }catch(NumberFormatException e){
@@ -1297,16 +1291,18 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             return;
         }
         description = txtDescription.getText();
-
+        
+        
         String category= (String) selectCategory.getSelectedItem();
         categoryList.add(category);
         descriptionList.add(description);
         quantityList.add(quantity);
         populateDonateTable();
-
+        
         txtQuantity.setText("");
         txtDescription.setText("");
         selectCategory.setSelectedIndex(0);
+        
 
     }//GEN-LAST:event_btnAddActionPerformed
 
@@ -1315,15 +1311,136 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         int selectedRow = tblDonate.getSelectedRow();
         if(selectedRow>=0){
 
-            categoryList.remove(selectedRow);
-            quantityList.remove(selectedRow);
-            descriptionList.remove(selectedRow);
-            populateDonateTable();
+                categoryList.remove(selectedRow);
+                quantityList.remove(selectedRow);
+                descriptionList.remove(selectedRow);
+                populateDonateTable();
         }
         else{
             JOptionPane.showMessageDialog(null, "Please select a row!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    
+   
+    private void btnDonateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonateActionPerformed
+        
+        if(categoryList.isEmpty()){
+            JOptionPane.showMessageDialog(null,"Please enter items to donate.");
+            return;
+        }
+        
+        String address = txtAddress.getText();
+        if(address == null || address.equals("")){
+            JOptionPane.showMessageDialog(null,"Please enter Address!");
+            return;
+        }
+        
+        String contactNumber = txtNumber.getText();
+        if(contactNumber == null || contactNumber.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Contact Number can't be empty!");
+            return;
+        }
+        
+        if(!phonePatternCheck(contactNumber)){
+            JOptionPane.showMessageDialog(null, "Please enter a valid Contact Number.", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        VolunteerInventoryWorkRequest request = new VolunteerInventoryWorkRequest();
+        
+        
+        for(String s: categoryList){
+            request.getCategory().add(s);
+        }
+        
+        for(String s: descriptionList){
+            request.getDescription().add(s);
+        }
+        
+        for(Integer s: quantityList){
+            request.getQuantity().add(s);
+        }
+        
+        request.setSenderAddress(address);
+        request.setSenderNumber(contactNumber);
+        request.setSender(userAccount);
+        request.setStatus("Sent");
+        
+        Organization org=null;
+        
+        for(Enterprise e: network.getEnterpriseDirectory().getEnterpriseList())
+        {
+            if(e.getEnterpriseType().equals(e.getEnterpriseType().NGO))
+            {
+                for (Organization organization : e.getOrganizationDirectory().getOrganizationList())
+                {
+                    if (organization instanceof InventoryOrganization){
+                        org = organization;
+                        org.getWorkQueue().getWorkRequestList().add(request);
+                    }
+                }
+            }
+        }
+        if (org!=null){
+            userAccount.getWorkQueue().getWorkRequestList().add(request);
+        } else {
+            JOptionPane.showMessageDialog(null, "Donation Request Failed!");
+            return;
+        }
+        
+        categoryList.clear();
+        quantityList.clear();
+        descriptionList.clear();
+        
+        JOptionPane.showMessageDialog(null, "Donation Request Sent Successfully. Your OrderId is : " +request.getOrderID());
+        populateDonateTable();
+        txtQuantity.setText("");
+        txtDescription.setText("");
+        txtAddress.setText("");
+        txtNumber.setText("");
+        selectCategory.setSelectedIndex(0);
+    }//GEN-LAST:event_btnDonateActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tblDonate.getSelectedRow();
+        
+        String description="";
+        
+        String quantityText = txtQuantity.getText();
+        if(quantityText==null || quantityText.equals("")){
+            JOptionPane.showMessageDialog(null,"Please enter quantity !");
+            return;
+        }
+        
+        try {
+            Integer.parseInt(txtQuantity.getText());
+        } catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Please type in a number for Quantity");
+            return;
+        }
+        int quantity = Integer.parseInt(quantityText);
+        if(quantity<=0){
+            JOptionPane.showMessageDialog(null, "Quantity should be greater than zero!");
+            return;
+        }
+        description = txtDescription.getText();
+       
+        String category= (String) selectCategory.getSelectedItem();
+        
+        categoryList.set(selectedRow, category);
+        quantityList.set(selectedRow, quantity);
+        descriptionList.set(selectedRow, description);
+        btnAdd.setEnabled(true);
+        btnModify.setEnabled(true);
+        btnUpdate.setEnabled(false);
+        tblDonate.setEnabled(true);
+        btnDelete.setEnabled(true);
+        btnDonate.setEnabled(true);
+        populateDonateTable();
+        
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void btnModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModifyActionPerformed
         // TODO add your handling code here:
@@ -1346,128 +1463,17 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnModifyActionPerformed
 
-    private void btnDonateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonateActionPerformed
-
-        if(categoryList.isEmpty()){
-            JOptionPane.showMessageDialog(null,"Please enter items to donate.");
-            return;
-        }
-
-        String address = txtAddress.getText();
-        if(address == null || address.equals("")){
-            JOptionPane.showMessageDialog(null,"Please enter Address!");
-            return;
-        }
-
-        String contactNumber = txtNumber.getText();
-        if(contactNumber == null || contactNumber.equals("")){
-            JOptionPane.showMessageDialog(null, "Contact Number can't be empty!");
-            return;
-        }
-
-        if(!phonePatternCheck(contactNumber)){
-            JOptionPane.showMessageDialog(null, "Please enter a valid Contact Number.", "Warning", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-
-        VolunteerInventoryWorkRequest request = new VolunteerInventoryWorkRequest();
-
-        for(String s: categoryList){
-            request.getCategory().add(s);
-        }
-
-        for(String s: descriptionList){
-            request.getDescription().add(s);
-        }
-
-        for(Integer s: quantityList){
-            request.getQuantity().add(s);
-        }
-
-        request.setSenderAddress(address);
-        request.setSenderNumber(contactNumber);
-        request.setSender(userAccount);
-        request.setStatus("Sent");
-
-        Organization org=null;
-
-        for(Enterprise e: network.getEnterpriseDirectory().getEnterpriseList())
-        {
-            if(e.getEnterpriseType().equals(e.getEnterpriseType().NGO))
-            {
-                for (Organization organization : e.getOrganizationDirectory().getOrganizationList())
-                {
-                    if (organization instanceof InventoryOrganization){
-                        org = organization;
-                        org.getWorkQueue().getWorkRequestList().add(request);
-                    }
-                }
-            }
-        }
-        if (org!=null){
-            userAccount.getWorkQueue().getWorkRequestList().add(request);
-        } else {
-            JOptionPane.showMessageDialog(null, "Donation Request Failed!");
-            return;
-        }
-
-        categoryList.clear();
-        quantityList.clear();
-        descriptionList.clear();
-
-        JOptionPane.showMessageDialog(null, "Donation Request Sent Successfully. Your OrderId is : " +request.getOrderID());
-        populateDonateTable();
-        txtQuantity.setText("");
-        txtDescription.setText("");
-        txtAddress.setText("");
-        txtNumber.setText("");
-        selectCategory.setSelectedIndex(0);
-    }//GEN-LAST:event_btnDonateActionPerformed
-
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void btnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoryActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblDonate.getSelectedRow();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        userProcessContainer.add("OrderHistoryJPanel", new OrderHistoryJPanel(userProcessContainer, userAccount, enterprise));
+        layout.next(userProcessContainer);    
+    }//GEN-LAST:event_btnHistoryActionPerformed
 
-        String description="";
-
-        String quantityText = txtQuantity.getText();
-        if(quantityText==null || quantityText.equals("")){
-            JOptionPane.showMessageDialog(null,"Please enter quantity !");
-            return;
-        }
-
-        try {
-            Integer.parseInt(txtQuantity.getText());
-        } catch(NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "Please type in a number for Quantity");
-            return;
-        }
-        int quantity = Integer.parseInt(quantityText);
-        if(quantity<=0){
-            JOptionPane.showMessageDialog(null, "Quantity should be greater than zero!");
-            return;
-        }
-        description = txtDescription.getText();
-
-        String category= (String) selectCategory.getSelectedItem();
-
-        categoryList.set(selectedRow, category);
-        quantityList.set(selectedRow, quantity);
-        descriptionList.set(selectedRow, description);
-        btnAdd.setEnabled(true);
-        btnModify.setEnabled(true);
-        btnUpdate.setEnabled(false);
-        tblDonate.setEnabled(true);
-        btnDelete.setEnabled(true);
-        btnDonate.setEnabled(true);
-        populateDonateTable();
-
-    }//GEN-LAST:event_btnUpdateActionPerformed
-
-    private void VolunteerJTabbedPaneStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_VolunteerJTabbedPaneStateChanged
+    private void areaJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areaJTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_VolunteerJTabbedPaneStateChanged
-
+    }//GEN-LAST:event_areaJTextFieldActionPerformed
+    
     private void populateDonateTable() {
         DefaultTableModel model = (DefaultTableModel)tblDonate.getModel();
         model.setRowCount(0);
@@ -1479,7 +1485,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                 row[2] = descriptionList.get(i);
                 model.addRow(row);    
         }
-    } 
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel DonateJPanel;
@@ -1578,4 +1584,6 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JSpinner volunteeringTime;
     private javax.swing.JSpinner volunteeringTime1;
     // End of variables declaration//GEN-END:variables
+
+    
 }

@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UserInterface.VolunteerRole;
 
@@ -19,23 +20,27 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import UserInterface.EducationRole.EducationDepartmentWorkAreaJPanel;
+
 /**
  *
- * @author sthavir
+ * @author poojaraghu
  */
-public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
+public class UpdateVolunteerDetailsJPanel extends javax.swing.JPanel {
+
     private JPanel userProcessContainer;
     private UserAccount userAccount;
     private Volunteer volunteer;
 
     /**
-     * Creates new form UpdateVolunteerDeatilsJPanel
+     * Creates new form UpdateVolunteerDetailsJPanel
      */
-    public UpdateVolunteerDeatilsJPanel(JPanel userProcessContainer, UserAccount userAccount) {
-        initComponents();
+    public UpdateVolunteerDetailsJPanel(JPanel userProcessContainer, UserAccount userAccount) {
+
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
+        initComponents();
         populateUserDetails();
+
     }
 
     public void populateUserDetails() {
@@ -104,60 +109,59 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnBack = new javax.swing.JButton();
-        jLabel17 = new javax.swing.JLabel();
         nameTextJField = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        educationjTextArea = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        nationalityTextJField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        contactNumberTextJField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        emailIDTextJField = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        genderJCombo = new javax.swing.JComboBox();
         btnUpdate = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
-        englishJCombo = new javax.swing.JComboBox();
+        DOBDate = new com.toedter.calendar.JDateChooser();
         jLabel8 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        languagejTextArea = new javax.swing.JTextArea();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         addressjTextArea1 = new javax.swing.JTextArea();
-        languageJTextField = new javax.swing.JTextField();
-        addLanguagejButton = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         cityTextJField = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        pincodeTextJField = new javax.swing.JTextField();
+        educationJCombo1 = new javax.swing.JComboBox();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        schoolTextJField = new javax.swing.JTextField();
+        DegreeTextJField = new javax.swing.JTextField();
+        addEducationjButton = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        educationjTextArea = new javax.swing.JTextArea();
+        jLabel18 = new javax.swing.JLabel();
+        englishJCombo = new javax.swing.JComboBox();
+        jLabel19 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        languagejTextArea = new javax.swing.JTextArea();
+        languageJTextField = new javax.swing.JTextField();
+        addLanguagejButton = new javax.swing.JButton();
         wordjCheckBox = new javax.swing.JCheckBox();
         exceljCheckBox = new javax.swing.JCheckBox();
-        jLabel12 = new javax.swing.JLabel();
         pptjCheckBox = new javax.swing.JCheckBox();
-        jLabel13 = new javax.swing.JLabel();
         emailjCheckBox = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
-        pincodeTextJField = new javax.swing.JTextField();
         webjCheckBox = new javax.swing.JCheckBox();
-        jLabel3 = new javax.swing.JLabel();
-        educationJCombo1 = new javax.swing.JComboBox();
         jLabel20 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         skillsjTextArea = new javax.swing.JTextArea();
-        nationalityTextJField = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        contactNumberTextJField = new javax.swing.JTextField();
-        schoolTextJField = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        DegreeTextJField = new javax.swing.JTextField();
-        emailIDTextJField = new javax.swing.JTextField();
-        addEducationjButton = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        genderJCombo = new javax.swing.JComboBox();
-        DOBDate = new com.toedter.calendar.JDateChooser();
 
-        setBackground(new java.awt.Color(255, 204, 204));
-        setPreferredSize(new java.awt.Dimension(1141, 944));
+        setBackground(new java.awt.Color(180, 195, 195));
 
         btnBack.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         btnBack.setText("<< Back");
@@ -167,21 +171,67 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel17.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
-        jLabel17.setText("Language Proficency & Skills");
-
         nameTextJField.setEditable(false);
         nameTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-
-        educationjTextArea.setEditable(false);
-        educationjTextArea.setColumns(20);
-        educationjTextArea.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        educationjTextArea.setRows(5);
-        jScrollPane2.setViewportView(educationjTextArea);
 
         jLabel1.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setText("Name: ");
+
+        jLabel2.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel2.setText("Sex: ");
+
+        jLabel3.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel3.setText("D.O.B:");
+
+        jLabel4.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel4.setText("Nationality:");
+
+        nationalityTextJField.setEditable(false);
+        nationalityTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        nationalityTextJField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nationalityTextJFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel5.setText("Email Id:");
+
+        contactNumberTextJField.setEditable(false);
+        contactNumberTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        contactNumberTextJField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contactNumberTextJFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel6.setText("Contact Number:");
+
+        emailIDTextJField.setEditable(false);
+        emailIDTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        emailIDTextJField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailIDTextJFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 24)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Update Volunteer Details");
+
+        genderJCombo.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        genderJCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Male", "Female", "Other" }));
+        genderJCombo.setEnabled(false);
+        genderJCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genderJComboActionPerformed(evt);
+            }
+        });
 
         btnUpdate.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         btnUpdate.setText("UPDATE");
@@ -200,6 +250,103 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
             }
         });
 
+        DOBDate.setEnabled(false);
+        DOBDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
+        jLabel8.setText("Personal Information");
+
+        jLabel9.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
+        jLabel9.setText("Contact Information");
+
+        jLabel10.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel10.setText("Address:");
+
+        addressjTextArea1.setEditable(false);
+        addressjTextArea1.setColumns(20);
+        addressjTextArea1.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        addressjTextArea1.setRows(5);
+        jScrollPane1.setViewportView(addressjTextArea1);
+
+        jLabel11.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
+        jLabel11.setText("Education");
+
+        cityTextJField.setEditable(false);
+        cityTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        cityTextJField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cityTextJFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel12.setText("City:");
+
+        jLabel13.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel13.setText("Pincode:");
+
+        pincodeTextJField.setEditable(false);
+        pincodeTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        pincodeTextJField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pincodeTextJFieldActionPerformed(evt);
+            }
+        });
+
+        educationJCombo1.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        educationJCombo1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10th", "12th", "Bachelors", "Masters" }));
+        educationJCombo1.setEnabled(false);
+        educationJCombo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                educationJCombo1ActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel14.setText("Education: ");
+
+        jLabel15.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel15.setText("School/University: ");
+
+        jLabel16.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel16.setText("Degree:");
+
+        schoolTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        schoolTextJField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                schoolTextJFieldActionPerformed(evt);
+            }
+        });
+
+        DegreeTextJField.setEditable(false);
+        DegreeTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        DegreeTextJField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DegreeTextJFieldActionPerformed(evt);
+            }
+        });
+
+        addEducationjButton.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        addEducationjButton.setText("ADD");
+        addEducationjButton.setEnabled(false);
+        addEducationjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addEducationjButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
+        jLabel17.setText("Language Proficency & Skills");
+
+        educationjTextArea.setEditable(false);
+        educationjTextArea.setColumns(20);
+        educationjTextArea.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        educationjTextArea.setRows(5);
+        jScrollPane2.setViewportView(educationjTextArea);
+
         jLabel18.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel18.setText("English: ");
@@ -213,29 +360,14 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel8.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
-        jLabel8.setText("Personal Information");
-
         jLabel19.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         jLabel19.setText("Other Language:");
-
-        jLabel9.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
-        jLabel9.setText("Contact Information");
 
         languagejTextArea.setEditable(false);
         languagejTextArea.setColumns(20);
         languagejTextArea.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         languagejTextArea.setRows(5);
         jScrollPane3.setViewportView(languagejTextArea);
-
-        jLabel10.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel10.setText("Address:");
-
-        addressjTextArea1.setEditable(false);
-        addressjTextArea1.setColumns(20);
-        addressjTextArea1.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        addressjTextArea1.setRows(5);
-        jScrollPane1.setViewportView(addressjTextArea1);
 
         languageJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         languageJTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -253,17 +385,6 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel11.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 18)); // NOI18N
-        jLabel11.setText("Education");
-
-        cityTextJField.setEditable(false);
-        cityTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        cityTextJField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cityTextJFieldActionPerformed(evt);
-            }
-        });
-
         wordjCheckBox.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         wordjCheckBox.setText("MS Word");
         wordjCheckBox.setEnabled(false);
@@ -277,9 +398,6 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         exceljCheckBox.setText("MS Excel");
         exceljCheckBox.setEnabled(false);
 
-        jLabel12.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel12.setText("City:");
-
         pptjCheckBox.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         pptjCheckBox.setText("PowerPoint");
         pptjCheckBox.setEnabled(false);
@@ -289,52 +407,16 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel13.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel13.setText("Pincode:");
-
         emailjCheckBox.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         emailjCheckBox.setText("Email Checking");
         emailjCheckBox.setEnabled(false);
-
-        jLabel2.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText("Sex: ");
-
-        pincodeTextJField.setEditable(false);
-        pincodeTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        pincodeTextJField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pincodeTextJFieldActionPerformed(evt);
-            }
-        });
 
         webjCheckBox.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         webjCheckBox.setText("Web Browsing");
         webjCheckBox.setEnabled(false);
 
-        jLabel3.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText("D.O.B:");
-
-        educationJCombo1.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        educationJCombo1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "10th", "12th", "Bachelors", "Masters" }));
-        educationJCombo1.setEnabled(false);
-        educationJCombo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                educationJCombo1ActionPerformed(evt);
-            }
-        });
-
         jLabel20.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         jLabel20.setText("Work Knowledge of:");
-
-        jLabel4.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText("Nationality:");
-
-        jLabel14.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel14.setText("Education: ");
 
         skillsjTextArea.setEditable(false);
         skillsjTextArea.setColumns(20);
@@ -342,86 +424,8 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         skillsjTextArea.setRows(5);
         jScrollPane4.setViewportView(skillsjTextArea);
 
-        nationalityTextJField.setEditable(false);
-        nationalityTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        nationalityTextJField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nationalityTextJFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel15.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel15.setText("School/University: ");
-
-        jLabel5.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel5.setText("Email Id:");
-
-        jLabel16.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel16.setText("Degree:");
-
         jLabel21.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         jLabel21.setText("Skills:");
-
-        contactNumberTextJField.setEditable(false);
-        contactNumberTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        contactNumberTextJField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contactNumberTextJFieldActionPerformed(evt);
-            }
-        });
-
-        schoolTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        schoolTextJField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                schoolTextJFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel6.setText("Contact Number:");
-
-        DegreeTextJField.setEditable(false);
-        DegreeTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        DegreeTextJField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DegreeTextJFieldActionPerformed(evt);
-            }
-        });
-
-        emailIDTextJField.setEditable(false);
-        emailIDTextJField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        emailIDTextJField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailIDTextJFieldActionPerformed(evt);
-            }
-        });
-
-        addEducationjButton.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
-        addEducationjButton.setText("ADD");
-        addEducationjButton.setEnabled(false);
-        addEducationjButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addEducationjButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 24)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Update Volunteer Details");
-
-        genderJCombo.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        genderJCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Male", "Female", "Other" }));
-        genderJCombo.setEnabled(false);
-        genderJCombo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genderJComboActionPerformed(evt);
-            }
-        });
-
-        DOBDate.setEnabled(false);
-        DOBDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -429,97 +433,95 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(67, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel10)
+                                .addComponent(jLabel13))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(genderJCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGap(3, 3, 3)
+                                        .addComponent(nameTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(DOBDate, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nationalityTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(contactNumberTextJField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                                    .addComponent(emailIDTextJField, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(pincodeTextJField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                                    .addComponent(cityTextJField, javax.swing.GroupLayout.Alignment.LEADING))))
+                        .addComponent(jLabel4)
+                        .addComponent(jLabel1)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel2))
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel18)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 35, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnUpdate)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSave))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel6)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel10)
-                                        .addComponent(jLabel13))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(genderJCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addGap(3, 3, 3)
-                                                .addComponent(nameTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(nationalityTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(DOBDate, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(contactNumberTextJField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                                            .addComponent(emailIDTextJField, javax.swing.GroupLayout.Alignment.LEADING))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(pincodeTextJField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                                            .addComponent(cityTextJField, javax.swing.GroupLayout.Alignment.LEADING))))
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel2))
-                            .addComponent(jLabel12))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))
+                        .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel18)
+                            .addComponent(DegreeTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(schoolTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(educationJCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel19))
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnUpdate)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnSave))
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel16))
-                                .addGap(39, 39, 39)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(DegreeTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(schoolTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(educationJCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel20)
-                                    .addComponent(jLabel21)
-                                    .addComponent(jLabel19))
-                                .addGap(24, 24, 24)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(121, 121, 121)
-                                                .addComponent(addEducationjButton))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(languageJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(55, 55, 55)
-                                                .addComponent(addLanguagejButton))))
+                                        .addGap(121, 121, 121)
+                                        .addComponent(addEducationjButton))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(pptjCheckBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(wordjCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(exceljCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(emailjCheckBox)
-                                            .addComponent(webjCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(englishJCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(40, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                        .addComponent(languageJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(55, 55, 55)
+                                        .addComponent(addLanguagejButton))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(pptjCheckBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(wordjCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(exceljCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(emailjCheckBox)
+                                    .addComponent(webjCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(englishJCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(24, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnBack)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -543,10 +545,10 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel2)
                             .addComponent(genderJCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(DOBDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(DOBDate, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(nationalityTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)))
@@ -642,16 +644,36 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         Matcher m = p.matcher(phoneNumber);
         return m.matches();
     }
+
     private boolean pincodePatternCheck(String pincode) {
         Pattern p = Pattern.compile("^[0-9]{5}$");
         Matcher m = p.matcher(pincode);
         return m.matches();
     }
+
     private boolean emailPatternCheck(String email) {
         Pattern p = Pattern.compile("^(.+)@(\\S+)$");
         Matcher m = p.matcher(email);
         return m.matches();
     }
+
+    private void nationalityTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nationalityTextJFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nationalityTextJFieldActionPerformed
+
+    private void contactNumberTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactNumberTextJFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contactNumberTextJFieldActionPerformed
+
+    private void emailIDTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailIDTextJFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailIDTextJFieldActionPerformed
+
+    private void genderJComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderJComboActionPerformed
+
+
+    }//GEN-LAST:event_genderJComboActionPerformed
+
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
 
         nameTextJField.setEditable(true);
@@ -676,6 +698,7 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         pptjCheckBox.setEnabled(true);
         webjCheckBox.setEnabled(true);
         emailjCheckBox.setEnabled(true);
+
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
@@ -814,31 +837,9 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         emailjCheckBox.setEnabled(false);
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void englishJComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_englishJComboActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_englishJComboActionPerformed
-
-    private void languageJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageJTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_languageJTextFieldActionPerformed
-
-    private void addLanguagejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addLanguagejButtonActionPerformed
-        userAccount.getVolunteer().getLanguageList().add(languageJTextField.getText());
-        populateLang();
-        languageJTextField.setText("");
-    }//GEN-LAST:event_addLanguagejButtonActionPerformed
-
     private void cityTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cityTextJFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cityTextJFieldActionPerformed
-
-    private void wordjCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordjCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_wordjCheckBoxActionPerformed
-
-    private void pptjCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pptjCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pptjCheckBoxActionPerformed
 
     private void pincodeTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pincodeTextJFieldActionPerformed
         // TODO add your handling code here:
@@ -851,14 +852,6 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_educationJCombo1ActionPerformed
 
-    private void nationalityTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nationalityTextJFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nationalityTextJFieldActionPerformed
-
-    private void contactNumberTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactNumberTextJFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contactNumberTextJFieldActionPerformed
-
     private void schoolTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_schoolTextJFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_schoolTextJFieldActionPerformed
@@ -867,9 +860,23 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_DegreeTextJFieldActionPerformed
 
-    private void emailIDTextJFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailIDTextJFieldActionPerformed
+    private void englishJComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_englishJComboActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailIDTextJFieldActionPerformed
+    }//GEN-LAST:event_englishJComboActionPerformed
+
+    private void languageJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_languageJTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_languageJTextFieldActionPerformed
+
+    private void wordjCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wordjCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wordjCheckBoxActionPerformed
+
+    private void addLanguagejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addLanguagejButtonActionPerformed
+        userAccount.getVolunteer().getLanguageList().add(languageJTextField.getText());
+        populateLang();
+        languageJTextField.setText("");
+    }//GEN-LAST:event_addLanguagejButtonActionPerformed
 
     private void addEducationjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEducationjButtonActionPerformed
 
@@ -903,11 +910,12 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
 
         schoolTextJField.setText("");
         DegreeTextJField.setText("");
+
     }//GEN-LAST:event_addEducationjButtonActionPerformed
 
-    private void genderJComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderJComboActionPerformed
-
-    }//GEN-LAST:event_genderJComboActionPerformed
+    private void pptjCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pptjCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pptjCheckBoxActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

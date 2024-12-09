@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UserInterface.EducationRole;
 
@@ -18,12 +19,12 @@ import javax.swing.SpinnerDateModel;
 
 /**
  *
- * @author poojaraghu
+ * @author vinaypawar
  */
 public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
-
-    private JPanel userProcessContainer;
-    private EducationVolunteerWorkRequest request;
+    
+     private JPanel userProcessContainer;
+     private EducationVolunteerWorkRequest request;
 
     /**
      * Creates new form ViewRequestDetailsJPanel
@@ -70,34 +71,112 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnSave = new javax.swing.JButton();
-        placeJTextField = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        requirementsJTextArea = new javax.swing.JTextArea();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        numberOfVolunteersJTextField = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        areaJTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        numberOfStudentsJTextField = new javax.swing.JTextField();
         jobTitleJTextField = new javax.swing.JTextField();
-        numberOfHoursJTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        volunteeringDate = new com.toedter.calendar.JDateChooser();
         jLabel7 = new javax.swing.JLabel();
-        btnUpdate = new javax.swing.JButton();
         Date date = new Date();
         SpinnerDateModel sm = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         volunteeringTime = new javax.swing.JSpinner(sm);
-        volunteeringDate = new com.toedter.calendar.JDateChooser();
+        placeJTextField = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        numberOfVolunteersJTextField = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        numberOfStudentsJTextField = new javax.swing.JTextField();
+        numberOfHoursJTextField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btnUpdate = new javax.swing.JButton();
+        btnSave = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        requirementsJTextArea = new javax.swing.JTextArea();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        areaJTextField = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(255, 204, 204));
-        setPreferredSize(new java.awt.Dimension(984, 965));
+        setBackground(new java.awt.Color(180, 195, 195));
+
+        btnBack.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel2.setText("Job Title:");
+
+        jobTitleJTextField.setEditable(false);
+        jobTitleJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel3.setText("Date:");
+
+        volunteeringDate.setEnabled(false);
+        volunteeringDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+
+        jLabel7.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel7.setText("Time: ");
+
+        JSpinner.DateEditor de = new JSpinner.DateEditor(volunteeringTime, "HH:mm");
+        volunteeringTime.setEditor(de);
+        volunteeringTime.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        volunteeringTime.setEnabled(false);
+
+        placeJTextField.setEditable(false);
+        placeJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel8.setText("Place:");
+
+        jLabel4.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText("Number of Hours:");
+
+        numberOfVolunteersJTextField.setEditable(false);
+        numberOfVolunteersJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+
+        jLabel9.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel9.setText("Number of Students:");
+
+        numberOfStudentsJTextField.setEditable(false);
+        numberOfStudentsJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        numberOfStudentsJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numberOfStudentsJTextFieldActionPerformed(evt);
+            }
+        });
+
+        numberOfHoursJTextField.setEditable(false);
+        numberOfHoursJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        numberOfHoursJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numberOfHoursJTextFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText("Requirements:");
+
+        jLabel5.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText("Number of Volunteers:");
+
+        btnUpdate.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        btnUpdate.setText("UPDATE");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         btnSave.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         btnSave.setText("SAVE");
@@ -108,108 +187,29 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
             }
         });
 
-        placeJTextField.setEditable(false);
-        placeJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-
         requirementsJTextArea.setEditable(false);
         requirementsJTextArea.setColumns(20);
         requirementsJTextArea.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         requirementsJTextArea.setRows(5);
         jScrollPane1.setViewportView(requirementsJTextArea);
 
-        jLabel8.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel8.setText("Place:");
-
-        jLabel4.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("Number of Hours:");
-
         jLabel10.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 24)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Education Department Work Area");
-
-        numberOfVolunteersJTextField.setEditable(false);
-        numberOfVolunteersJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
 
         jLabel11.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel11.setText("Area:");
 
-        btnBack.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
-        btnBack.setText("<< Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
-
-        jLabel9.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel9.setText("Number of Students:");
-
         areaJTextField.setEditable(false);
         areaJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-
-        jLabel2.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Job Title:");
-
-        numberOfStudentsJTextField.setEditable(false);
-        numberOfStudentsJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        numberOfStudentsJTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numberOfStudentsJTextFieldActionPerformed(evt);
-            }
-        });
-
-        jobTitleJTextField.setEditable(false);
-        jobTitleJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-
-        numberOfHoursJTextField.setEditable(false);
-        numberOfHoursJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        numberOfHoursJTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numberOfHoursJTextFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel3.setText("Date:");
-
-        jLabel1.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("Requirements:");
-
-        jLabel5.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("Number of Volunteers:");
-
-        jLabel7.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel7.setText("Time: ");
-
-        btnUpdate.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
-        btnUpdate.setText("UPDATE");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
-            }
-        });
-
-        JSpinner.DateEditor de = new JSpinner.DateEditor(volunteeringTime, "HH:mm");
-        volunteeringTime.setEditor(de);
-        volunteeringTime.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
-        volunteeringTime.setEnabled(false);
-
-        volunteeringDate.setEnabled(false);
-        volunteeringDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(319, Short.MAX_VALUE)
+                .addContainerGap(296, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,8 +228,8 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
                                 .addComponent(placeJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jobTitleJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(volunteeringDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(volunteeringDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
@@ -243,12 +243,12 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
                         .addComponent(jLabel11)
                         .addGap(18, 18, 18)
                         .addComponent(areaJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(319, Short.MAX_VALUE))
+                .addContainerGap(297, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnBack)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 984, Short.MAX_VALUE)
+            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,185 +263,43 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
                     .addComponent(jobTitleJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(volunteeringTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(placeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(areaJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numberOfHoursJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(volunteeringDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(volunteeringDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(volunteeringTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(placeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(areaJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfHoursJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(398, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        // TODO add your handling code here:
-
-        String jobTitle = jobTitleJTextField.getText();
-        if(jobTitle == null || jobTitle.equals("")){
-            JOptionPane.showMessageDialog(null, "Job Title can't be empty!");
-            return;
-        }
-        request.setJobTitle(jobTitle);
-
-        Date volDate = volunteeringDate.getDate();
-        if(volDate == null || volDate.equals("")){
-            JOptionPane.showMessageDialog(null, "Date can't be empty!");
-            return;
-        }
-        if(volDate.before(new Date())){
-            JOptionPane.showMessageDialog(null, "Date and Time can't be in past.");
-            return;
-        }
-        request.setDate(volDate);
-
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm");
-        Date time =  (Date) volunteeringTime.getValue();
-        String volTime = format.format(time);
-        if(volTime == null || volTime.equals("")){
-            JOptionPane.showMessageDialog(null, "Time can't be empty!");
-            return;
-        }
-        request.setTime(volTime);
-
-        String place = placeJTextField.getText();
-        if(place == null || place.equals("")){
-            JOptionPane.showMessageDialog(null, "Place can't be empty!");
-            return;
-        }
-        request.setPlace(place);
-
-        String area = areaJTextField.getText();
-        if(area == null || area.equals("")){
-            JOptionPane.showMessageDialog(null, "Area can't be empty!");
-            return;
-        }
-        request.setArea(area);
-
-        String hour = numberOfHoursJTextField.getText();
-        if(hour == null || hour.equals("")){
-            JOptionPane.showMessageDialog(null, "Number of Hours can't be empty!");
-            return;
-        }
-        try {
-            Integer.parseInt(hour);
-        } catch (NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "Please enter a number for Number Of Hours.");
-            return;
-        }
-        Integer numbofHours = Integer.parseInt(hour);
-        if(numbofHours<=0)
-        {
-            JOptionPane.showMessageDialog(null, "Number of hours should be greater than 0.");
-            return;
-        }
-        request.setNumberOfhours(numbofHours);
-
-        String student = numberOfStudentsJTextField.getText();
-        if(student == null || student.equals("")){
-            JOptionPane.showMessageDialog(null, "Number of Students can't be empty!");
-            return;
-        }
-        try {
-            Integer.parseInt(student);
-        } catch (NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "Please enter a number for Number Of Students.");
-            return;
-        }
-        Integer numbOfStudents = Integer.parseInt(student);
-        if(numbOfStudents<=0)
-        {
-            JOptionPane.showMessageDialog(null, "Number of students should be greater than 0.");
-            return;
-        }
-        request.setNumberOfStudents(numbOfStudents);
-
-        String vol = numberOfVolunteersJTextField.getText();
-        if(vol == null || vol.equals("")){
-            JOptionPane.showMessageDialog(null, "Number of Volunteers can't be empty!");
-            return;
-        }
-        try {
-            Integer.parseInt(vol);
-        } catch (NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "Please enter a number for Number Of Volunteers.");
-            return;
-        }
-        Integer numbOfVol = Integer.parseInt(vol);
-        if(numbOfVol<=0)
-        {
-            JOptionPane.showMessageDialog(null, "Number of volunteers should be greater than 0.");
-            return;
-        }
-        int currentVol = request.getNumberOfVolunteers();
-        int currentVac = request.getCurrentVacancy();
-
-        int assigned = currentVol - currentVac;
-        if(numbOfVol < assigned){
-            JOptionPane.showMessageDialog(null, "Number of Volunteers should be greater than already assigned volunteers!");
-            return;
-        }
-        request.setNumberOfVolunteers(numbOfVol);
-        request.setCurrentVacancy(request.getNumberOfVolunteers()-currentVol+currentVac);
-
-        String message = requirementsJTextArea.getText();
-        if(message == null || message.equals("")){
-            JOptionPane.showMessageDialog(null, "Requirements can't be empty!");
-            return;
-        }
-        request.setMessage(message);
-
-        if(request.getCurrentVacancy() == 0){
-            request.setStatus("Completed");
-        } else if(request.getCurrentVacancy() == request.getNumberOfVolunteers()){
-            request.setStatus("Sent");
-        } else {
-            request.setStatus("Pending");
-        }
-
-        JOptionPane.showMessageDialog(null, "Request Details Updated Successfully");
-
-        jobTitleJTextField.setEditable(false);
-        placeJTextField.setEditable(false);
-        numberOfVolunteersJTextField.setEditable(false);
-        numberOfStudentsJTextField.setEditable(false);
-        numberOfHoursJTextField.setEditable(false);
-        requirementsJTextArea.setEditable(false);
-        volunteeringDate.setEnabled(false);
-        volunteeringTime.setEnabled(false);
-        areaJTextField.setEditable(false);
-        btnUpdate.setEnabled(true);
-        btnSave.setEnabled(false);
-
-    }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -453,14 +311,6 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
-
-    private void numberOfStudentsJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfStudentsJTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numberOfStudentsJTextFieldActionPerformed
-
-    private void numberOfHoursJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfHoursJTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_numberOfHoursJTextFieldActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
@@ -475,8 +325,163 @@ public class ViewRequestDetailsJPanel extends javax.swing.JPanel {
         areaJTextField.setEditable(true);
         btnUpdate.setEnabled(false);
         btnSave.setEnabled(true);
-
+        
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+        
+        
+        String jobTitle = jobTitleJTextField.getText();
+        if(jobTitle == null || jobTitle.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Job Title can't be empty!");
+            return;
+        }
+        request.setJobTitle(jobTitle);
+        
+        Date volDate = volunteeringDate.getDate();
+        if(volDate == null || volDate.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Date can't be empty!");
+            return;
+        }
+        if(volDate.before(new Date())){
+            JOptionPane.showMessageDialog(null, "Date and Time can't be in past.");
+            return;
+        }
+        request.setDate(volDate);
+        
+        SimpleDateFormat format = new SimpleDateFormat("HH:mm");      
+        Date time =  (Date) volunteeringTime.getValue();
+        String volTime = format.format(time);
+        if(volTime == null || volTime.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Time can't be empty!");
+            return;
+        }
+        request.setTime(volTime);
+        
+        String place = placeJTextField.getText();
+        if(place == null || place.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Place can't be empty!");
+            return;
+        }
+        request.setPlace(place);
+        
+        String area = areaJTextField.getText();
+        if(area == null || area.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Area can't be empty!");
+            return;
+        }
+        request.setArea(area);
+            
+            
+        String hour = numberOfHoursJTextField.getText();
+        if(hour == null || hour.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Number of Hours can't be empty!");
+            return;
+        }
+         try {
+            Integer.parseInt(hour);    
+        } catch (NumberFormatException e){    
+            JOptionPane.showMessageDialog(null, "Please enter a number for Number Of Hours.");
+            return;
+        }
+        Integer numbofHours = Integer.parseInt(hour);
+        if(numbofHours<=0)
+        {
+            JOptionPane.showMessageDialog(null, "Number of hours should be greater than 0.");
+            return;
+        }
+        request.setNumberOfhours(numbofHours);
+        
+       String student = numberOfStudentsJTextField.getText();
+        if(student == null || student.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Number of Students can't be empty!");
+            return;
+        } 
+        try {
+            Integer.parseInt(student);    
+        } catch (NumberFormatException e){    
+            JOptionPane.showMessageDialog(null, "Please enter a number for Number Of Students.");
+            return;
+        }
+        Integer numbOfStudents = Integer.parseInt(student);
+        if(numbOfStudents<=0)
+        {
+            JOptionPane.showMessageDialog(null, "Number of students should be greater than 0.");
+            return;
+        }
+        request.setNumberOfStudents(numbOfStudents);
+            
+        String vol = numberOfVolunteersJTextField.getText();
+        if(vol == null || vol.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Number of Volunteers can't be empty!");
+            return;
+        }  
+        try {
+            Integer.parseInt(vol);
+        } catch (NumberFormatException e){  
+            JOptionPane.showMessageDialog(null, "Please enter a number for Number Of Volunteers.");
+            return;
+        }
+        Integer numbOfVol = Integer.parseInt(vol);
+        if(numbOfVol<=0)
+        {
+            JOptionPane.showMessageDialog(null, "Number of volunteers should be greater than 0.");
+            return;
+        }
+        int currentVol = request.getNumberOfVolunteers();
+        int currentVac = request.getCurrentVacancy();
+        
+        int assigned = currentVol - currentVac;
+        if(numbOfVol < assigned){
+            JOptionPane.showMessageDialog(null, "Number of Volunteers should be greater than already assigned volunteers!");
+            return; 
+        }
+        request.setNumberOfVolunteers(numbOfVol);
+        request.setCurrentVacancy(request.getNumberOfVolunteers()-currentVol+currentVac);
+        
+        
+        String message = requirementsJTextArea.getText();
+        if(message == null || message.equals("")){ 
+            JOptionPane.showMessageDialog(null, "Requirements can't be empty!");
+            return;
+        }
+        request.setMessage(message);
+            
+           
+        if(request.getCurrentVacancy() == 0){
+            request.setStatus("Completed");
+        } else if(request.getCurrentVacancy() == request.getNumberOfVolunteers()){
+            request.setStatus("Sent");
+        } else {
+           request.setStatus("Pending");
+        }
+            
+        
+        JOptionPane.showMessageDialog(null, "Request Details Updated Successfully");
+        
+        jobTitleJTextField.setEditable(false);
+        placeJTextField.setEditable(false);
+        numberOfVolunteersJTextField.setEditable(false);
+        numberOfStudentsJTextField.setEditable(false);
+        numberOfHoursJTextField.setEditable(false);
+        requirementsJTextArea.setEditable(false);
+        volunteeringDate.setEnabled(false);
+        volunteeringTime.setEnabled(false);
+        areaJTextField.setEditable(false);
+        btnUpdate.setEnabled(true);
+        btnSave.setEnabled(false);
+
+        
+    }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void numberOfHoursJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfHoursJTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numberOfHoursJTextFieldActionPerformed
+
+    private void numberOfStudentsJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numberOfStudentsJTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numberOfStudentsJTextFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

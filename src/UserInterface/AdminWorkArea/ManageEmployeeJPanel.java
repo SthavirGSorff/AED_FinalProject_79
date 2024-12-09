@@ -1,6 +1,6 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UserInterface.AdminWorkArea;
 
@@ -14,10 +14,10 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author poojaraghu
+ * @author vinaypawar
  */
 public class ManageEmployeeJPanel extends javax.swing.JPanel {
-    
+
     private OrganizationDirectory organizationDir;
     private JPanel userProcessContainer;
     
@@ -61,7 +61,6 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -71,10 +70,6 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        nameJTextField = new javax.swing.JTextField();
-        organizationEmpJComboBox = new javax.swing.JComboBox();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         organizationJTable = new javax.swing.JTable();
         addJButton = new javax.swing.JButton();
@@ -82,22 +77,12 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         backJButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        nameJTextField = new javax.swing.JTextField();
+        organizationEmpJComboBox = new javax.swing.JComboBox();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
-        setPreferredSize(new java.awt.Dimension(1000, 473));
-
-        nameJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-
-        organizationEmpJComboBox.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel3.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
-        jLabel3.setText("Organization");
-
-        jLabel6.setBackground(new java.awt.Color(180, 195, 195));
-        jLabel6.setFont(new java.awt.Font("Al Nile", 1, 24)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("MANAGE EMPLOYEE WORKAREA");
+        setBackground(new java.awt.Color(180, 195, 195));
 
         organizationJTable.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 13)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -127,6 +112,10 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(organizationJTable);
+        if (organizationJTable.getColumnModel().getColumnCount() > 0) {
+            organizationJTable.getColumnModel().getColumn(0).setResizable(false);
+            organizationJTable.getColumnModel().getColumn(1).setResizable(false);
+        }
 
         addJButton.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         addJButton.setText("Create Employee");
@@ -158,6 +147,19 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         jLabel2.setText("Name");
 
+        nameJTextField.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+
+        organizationEmpJComboBox.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel3.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+        jLabel3.setText("Organization");
+
+        jLabel6.setBackground(new java.awt.Color(180, 195, 195));
+        jLabel6.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 24)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("MANAGE EMPLOYEE WORKAREA");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -168,14 +170,14 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
                         .addContainerGap()
                         .addComponent(backJButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(218, Short.MAX_VALUE)
+                        .addContainerGap(257, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
                                 .addComponent(organizationJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(224, Short.MAX_VALUE))
+                .addContainerGap(263, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -196,9 +198,9 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(backJButton)
-                .addGap(27, 27, 27)
+                .addGap(10, 10, 10)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(organizationJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -219,32 +221,25 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
-
+        
         Organization organization = (Organization) organizationEmpJComboBox.getSelectedItem();
         String name = nameJTextField.getText();
-
+        
         if(name.equals("") || name == null){
             JOptionPane.showMessageDialog(null, "Please enter a full name.");
             return;
         }
-
+        
         if(organization.getName().equals("Volunteer Organization")){
-            organization.getEmployeeDirectory().createVolunteer(name);
-            populateTable(organization);
-            return;
+             organization.getEmployeeDirectory().createVolunteer(name);
+             populateTable(organization);
+             return;
         }
-
+        
         organization.getEmployeeDirectory().createEmployee(name);
         populateTable(organization);
-
+        
     }//GEN-LAST:event_addJButtonActionPerformed
-
-    private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
-        Organization organization = (Organization) organizationJComboBox.getSelectedItem();
-        if (organization != null){
-            populateTable(organization);
-        }
-    }//GEN-LAST:event_organizationJComboBoxActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
@@ -253,6 +248,12 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
 
+    private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
+        Organization organization = (Organization) organizationJComboBox.getSelectedItem();
+        if (organization != null){
+            populateTable(organization);
+        }
+    }//GEN-LAST:event_organizationJComboBoxActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addJButton;
