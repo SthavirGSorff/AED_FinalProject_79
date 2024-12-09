@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UserInterface.TransportRole;
 
@@ -29,16 +30,16 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author sthavir
+ * @author poojaraghu
  */
 public class TransportWorkAreaJPanel extends javax.swing.JPanel {
-    
+
     private TransportOrganization transportOrganization;
     private JPanel userProcessContainer;
     private EcoSystem business;
     private UserAccount userAccount;
     private Enterprise enterprise;
-
+    
     /**
      * Creates new form TransportWorkAreaJPanel
      */
@@ -256,6 +257,8 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                         model.addRow(row);
         }} 
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -282,10 +285,10 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         contactjTextField = new javax.swing.JTextField();
-        enterpriseLabel = new javax.swing.JLabel();
-        valueLabel = new javax.swing.JLabel();
         pickUpDate = new com.toedter.calendar.JDateChooser();
         deliveryDate = new com.toedter.calendar.JDateChooser();
+        enterpriseLabel = new javax.swing.JLabel();
+        valueLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -309,11 +312,9 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
 
-        jTabbedPane1.setBackground(new java.awt.Color(255, 204, 204));
         jTabbedPane1.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
-        jPanel1.setPreferredSize(new java.awt.Dimension(979, 957));
+        jPanel1.setBackground(new java.awt.Color(180, 195, 195));
 
         ordersJTable.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 13)); // NOI18N
         ordersJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -381,17 +382,12 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        enterpriseLabel.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 16)); // NOI18N
-        enterpriseLabel.setText("EnterPrise -");
-
-        valueLabel.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 16)); // NOI18N
-        valueLabel.setText("<value>");
-
         pickUpDate.setToolTipText("");
         pickUpDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
 
         deliveryDate.setToolTipText("");
         deliveryDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+
         enterpriseLabel.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 16)); // NOI18N
         enterpriseLabel.setText("EnterPrise -");
 
@@ -406,7 +402,7 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 82, Short.MAX_VALUE)
+                .addGap(0, 76, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -423,20 +419,19 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                                     .addComponent(jLabel2)
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(assignJButton)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
-                                .addComponent(contactjTextField)
-                                .addComponent(pickUpDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(assignJButton)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                            .addComponent(contactjTextField)
+                            .addComponent(pickUpDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(deliveryDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(enterpriseLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(valueLabel)))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -455,9 +450,9 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(pickUpDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
                         .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(12, 12, 12)
                         .addComponent(deliveryDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(contactjTextField)
@@ -472,12 +467,12 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(440, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Home", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel2.setBackground(new java.awt.Color(180, 195, 195));
 
         jLabel7.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 24)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -584,7 +579,7 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 979, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -631,7 +626,7 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(filterComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
                         .addComponent(deliverButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -661,7 +656,7 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(recieverContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(senderContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(329, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("My Orders", jPanel2);
@@ -674,36 +669,17 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 652, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private boolean phonePatternCheck(String phoneNumber) {
         Pattern p = Pattern.compile("^[0-9]{10}$");
         Matcher m = p.matcher(phoneNumber);
         return m.matches();
     }
-    private void ordersJTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersJTableMouseClicked
-
-        int selectedRow = ordersJTable.getSelectedRow();
-        if(selectedRow<0){
-            JOptionPane.showConfirmDialog(null, "Please select a row from table to view details.!","Warning", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            WorkRequest w = (WorkRequest) ordersJTable.getValueAt(selectedRow, 0);
-            if(w instanceof VolunteerInventoryWorkRequest){
-                VolunteerInventoryWorkRequest wr =(VolunteerInventoryWorkRequest) w;
-                recieverAddress.setText(wr.getRecieverAddress());
-                senderAddress.setText(wr.getSenderAddress());
-            }else{
-                HealthPharmacyWorkRequest wr =(HealthPharmacyWorkRequest) w;
-                senderAddress.setText(wr.getRecieverAddress());
-                recieverAddress.setText(wr.getSenderAddress());
-            }
-
-        }
-    }//GEN-LAST:event_ordersJTableMouseClicked
-
+    
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
 
         int selectedRow = ordersJTable.getSelectedRow();
@@ -713,43 +689,44 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
             return;
         }
         else{
-
+            
             WorkRequest wr = (WorkRequest)ordersJTable.getValueAt(selectedRow, 0);
             if(wr instanceof VolunteerInventoryWorkRequest){
                 VolunteerInventoryWorkRequest request = (VolunteerInventoryWorkRequest) wr;
-
+                
+               
                 Date pickDate = pickUpDate.getDate();
-                if(pickDate == null || pickDate.equals("")){
+                if(pickDate == null || pickDate.equals("")){ 
                     JOptionPane.showMessageDialog(null, "Pick Up Date can't be empty!");
                     return;
                 }
-                if(pickDate.before(new Date())){
+                if(pickDate.before(new Date())){ 
                     JOptionPane.showMessageDialog(null, "Pick Up Date can't be in past.");
                     return;
                 }
-
+                
                 request.setPickupDate(pickDate);
 
                 Date deliverDate = deliveryDate.getDate();
-                if(deliverDate == null || deliverDate.equals("")){
+                if(deliverDate == null || deliverDate.equals("")){ 
                     JOptionPane.showMessageDialog(null, "Delivery Date can't be empty!");
                     return;
                 }
-                if(deliverDate.before(new Date())){
+                if(deliverDate.before(new Date())){ 
                     JOptionPane.showMessageDialog(null, "Delivery Date can't be in past.");
                     return;
                 }
                 SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy");
                 String deliverDateString = formatter.format(deliverDate);
                 String pickUpDateString = formatter.format(pickDate);
-                if(deliverDateString.compareTo(pickUpDateString)<0){
+                if(deliverDateString.compareTo(pickUpDateString)<0){ 
                     JOptionPane.showMessageDialog(null, "Delivery Date can't be before Pickup Date.");
                     return;
                 }
                 request.setExpectedDelivery(deliverDate);
 
                 String contactNumber = contactjTextField.getText();
-                if(contactNumber == null || contactNumber.equals("")){
+                if(contactNumber == null || contactNumber.equals("")){ 
                     JOptionPane.showMessageDialog(null, "Contact Number can't be empty!");
                     return;
                 }
@@ -759,37 +736,38 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                 }
                 request.setDeliveryNumber(contactNumber);
 
-                request.setDelivery(userAccount);
-                userAccount.getWorkQueue().getWorkRequestList().add(request);
-                request.setStatus("Delivery Assigned");
-                contactjTextField.setText("");
-                senderAddress.setText("");
-                recieverAddress.setText("");
-                pickUpDate.setDate(null);
-                deliveryDate.setDate(null);
-                JOptionPane.showMessageDialog(null, "Delivery Request Assigned Successfully");
 
-                populateOrders();
-                populateAssignedOrders();
-            }
-            else {
-                HealthPharmacyWorkRequest request = (HealthPharmacyWorkRequest) wr;
-                Date pickDate = pickUpDate.getDate();
-                if(pickDate == null || pickDate.equals("")){
+                    request.setDelivery(userAccount);
+                    userAccount.getWorkQueue().getWorkRequestList().add(request);
+                    request.setStatus("Delivery Assigned");
+                    contactjTextField.setText("");
+                    senderAddress.setText("");
+                    recieverAddress.setText("");
+                    pickUpDate.setDate(null);
+                    deliveryDate.setDate(null);
+                    JOptionPane.showMessageDialog(null, "Delivery Request Assigned Successfully");
+
+                    populateOrders();
+                    populateAssignedOrders();
+                }
+                else {
+                    HealthPharmacyWorkRequest request = (HealthPharmacyWorkRequest) wr;
+                    Date pickDate = pickUpDate.getDate();
+                if(pickDate == null || pickDate.equals("")){ 
                     JOptionPane.showMessageDialog(null, "Pick Up Date can't be empty!");
                     return;
                 }
                 request.setPickupDate(pickDate);
 
                 Date deliverDate = deliveryDate.getDate();
-                if(deliverDate == null || deliverDate.equals("")){
+                if(deliverDate == null || deliverDate.equals("")){ 
                     JOptionPane.showMessageDialog(null, "Delivery Date can't be empty!");
                     return;
                 }
                 request.setExpectedDelivery(deliverDate);
 
                 String contactNumber = contactjTextField.getText();
-                if(contactNumber == null || contactNumber.equals("")){
+                if(contactNumber == null || contactNumber.equals("")){ 
                     JOptionPane.showMessageDialog(null, "Contact Number can't be empty!");
                     return;
                 }
@@ -798,6 +776,7 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                     return;
                 }
                 request.setDeliveryNumber(contactNumber);
+
 
                 request.setDelivery(userAccount);
                 userAccount.getWorkQueue().getWorkRequestList().add(request);
@@ -811,13 +790,34 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
 
                 populateOrders();
                 populateAssignedOrders();
-            }
-        }
+                }
+           }
     }//GEN-LAST:event_assignJButtonActionPerformed
 
     private void contactjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactjTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_contactjTextFieldActionPerformed
+
+    private void ordersJTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordersJTableMouseClicked
+        
+        int selectedRow = ordersJTable.getSelectedRow();
+        if(selectedRow<0){
+            JOptionPane.showConfirmDialog(null, "Please select a row from table to view details.!","Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            WorkRequest w = (WorkRequest) ordersJTable.getValueAt(selectedRow, 0);
+            if(w instanceof VolunteerInventoryWorkRequest){
+                VolunteerInventoryWorkRequest wr =(VolunteerInventoryWorkRequest) w;
+                recieverAddress.setText(wr.getRecieverAddress());
+                senderAddress.setText(wr.getSenderAddress());  
+            }else{
+                HealthPharmacyWorkRequest wr =(HealthPharmacyWorkRequest) w;
+                senderAddress.setText(wr.getRecieverAddress());
+                recieverAddress.setText(wr.getSenderAddress());  
+            }
+            
+        }
+    }//GEN-LAST:event_ordersJTableMouseClicked
 
     private void assignedJTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_assignedJTableMouseClicked
         int selectedRow = assignedJTable.getSelectedRow();
@@ -825,14 +825,14 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showConfirmDialog(null, "Please select a row from table to view details.!","Warning", JOptionPane.WARNING_MESSAGE);
         }
         else{
-
+               
             WorkRequest w = (WorkRequest) assignedJTable.getValueAt(selectedRow, 0);
             if(w instanceof VolunteerInventoryWorkRequest){
                 VolunteerInventoryWorkRequest wr = (VolunteerInventoryWorkRequest) w;
                 recieverAdd.setText(wr.getRecieverAddress());
                 reciever.setText(wr.getReceiver().getEmployee().getName());
                 recieverContact.setText(wr.getRecieverNumber());
-                senderAdd.setText(wr.getSenderAddress());
+                senderAdd.setText(wr.getSenderAddress());  
                 sender.setText(wr.getSender().getEmployee().getName());
                 senderContact.setText(wr.getSenderNumber());
             }else{
@@ -840,17 +840,14 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
                 senderAdd.setText(wr.getRecieverAddress());
                 sender.setText(wr.getReceiver().getEmployee().getName());
                 senderContact.setText(wr.getRecieverNumber());
-                recieverAdd.setText(wr.getSenderAddress());
+                recieverAdd.setText(wr.getSenderAddress());  
                 reciever.setText(wr.getSender().getEmployee().getName());
                 recieverContact.setText(wr.getSenderNumber());
             }
-
+            
+            
         }
     }//GEN-LAST:event_assignedJTableMouseClicked
-
-    private void senderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_senderActionPerformed
 
     private void deliverButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliverButtonActionPerformed
         int selectedRow = assignedJTable.getSelectedRow();
@@ -860,73 +857,80 @@ public class TransportWorkAreaJPanel extends javax.swing.JPanel {
             return;
         } else{
 
-            WorkRequest w = (WorkRequest) assignedJTable.getValueAt(selectedRow, 0);
-            if(w instanceof VolunteerInventoryWorkRequest){
-                VolunteerInventoryWorkRequest request = (VolunteerInventoryWorkRequest) w;
+                WorkRequest w = (WorkRequest) assignedJTable.getValueAt(selectedRow, 0);
+                if(w instanceof VolunteerInventoryWorkRequest){
+                    VolunteerInventoryWorkRequest request = (VolunteerInventoryWorkRequest) w;
 
-                if(request.getStatus().equals("Delivered")){
-                    JOptionPane.showMessageDialog(null, "Already Delivered!");
-                    return;
+                    if(request.getStatus().equals("Delivered")){
+                        JOptionPane.showMessageDialog(null, "Already Delivered!");
+                        return;
+                    }
+
+                    request.setStatus("Delivered");
+                    JOptionPane.showMessageDialog(null, "Status Updated Successfully.!");
+
+                    populateAssignedOrders();
+                    recieverAdd.setText("");
+                    reciever.setText("");
+                    recieverContact.setText("");
+                    senderAdd.setText("");  
+                    sender.setText("");
+                    senderContact.setText("");
+                
+                } else{
+                    
+                    HealthPharmacyWorkRequest request = (HealthPharmacyWorkRequest) w;
+                    
+                    if(request.getStatus().equals("Delivered")){
+                        JOptionPane.showMessageDialog(null, "Already Delivered!");
+                        return;
+                    }
+                    
+                    request.setStatus("Delivered");
+                    JOptionPane.showMessageDialog(null, "Status Updated Successfully.!");
+       
+                    populateAssignedOrders();
+                    recieverAdd.setText("");
+                    reciever.setText("");
+                    recieverContact.setText("");
+                    senderAdd.setText("");  
+                    sender.setText("");
+                    senderContact.setText("");
                 }
-
-                request.setStatus("Delivered");
-                JOptionPane.showMessageDialog(null, "Status Updated Successfully.!");
-
-                populateAssignedOrders();
-                recieverAdd.setText("");
-                reciever.setText("");
-                recieverContact.setText("");
-                senderAdd.setText("");
-                sender.setText("");
-                senderContact.setText("");
-
-            } else{
-
-                HealthPharmacyWorkRequest request = (HealthPharmacyWorkRequest) w;
-
-                if(request.getStatus().equals("Delivered")){
-                    JOptionPane.showMessageDialog(null, "Already Delivered!");
-                    return;
-                }
-
-                request.setStatus("Delivered");
-                JOptionPane.showMessageDialog(null, "Status Updated Successfully.!");
-
-                populateAssignedOrders();
-                recieverAdd.setText("");
-                reciever.setText("");
-                recieverContact.setText("");
-                senderAdd.setText("");
-                sender.setText("");
-                senderContact.setText("");
-            }
-        }
+           }
     }//GEN-LAST:event_deliverButtonActionPerformed
-
-    private void filterComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_filterComboBoxItemStateChanged
-        String filter = (String) filterComboBox.getSelectedItem();
-
-        if(filter.equals("All")){
-            populateAssignedOrders();
-        }
-
-        if(filter.equals("Undelivered")){
-            populateDeliveryAssignedOrders();
-        }
-
-        if(filter.equals("Delivered")){
-            populateDeliveredOrders();
-        }
-
-    }//GEN-LAST:event_filterComboBoxItemStateChanged
-
-    private void filterComboBoxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_filterComboBoxMouseClicked
-
-    }//GEN-LAST:event_filterComboBoxMouseClicked
 
     private void filterComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_filterComboBoxActionPerformed
+
+    private void filterComboBoxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_filterComboBoxMouseClicked
+       
+        
+    }//GEN-LAST:event_filterComboBoxMouseClicked
+
+    private void filterComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_filterComboBoxItemStateChanged
+        String filter = (String) filterComboBox.getSelectedItem();
+        
+        if(filter.equals("All")){
+            populateAssignedOrders();
+        }
+        
+        if(filter.equals("Undelivered")){
+            populateDeliveryAssignedOrders();
+        }
+        
+        if(filter.equals("Delivered")){
+            populateDeliveredOrders();
+        }
+        
+        
+        
+    }//GEN-LAST:event_filterComboBoxItemStateChanged
+
+    private void senderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_senderActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

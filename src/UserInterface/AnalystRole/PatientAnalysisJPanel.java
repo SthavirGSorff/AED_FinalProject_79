@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UserInterface.AnalystRole;
 //import org.jfree.data.category;
@@ -36,9 +37,10 @@ import org.jfree.chart.renderer.category.StandardBarPainter;
 
 /**
  *
- * @author sthavir
+ * @author poojaraghu
  */
 public class PatientAnalysisJPanel extends javax.swing.JPanel {
+
     private JPanel userProcessContainer;
     private AnalyticsOrganization organization;
     private Enterprise enterprise;
@@ -47,7 +49,7 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
     EcoSystem business;
 
     /**
-     * Creates new form PatientAnalysisJPanel
+     * Creates new form Prediction
      */
     public PatientAnalysisJPanel(JPanel userProcessContainer, UserAccount account,
             AnalyticsOrganization organization, Enterprise enterprise, EcoSystem business, Network network) {
@@ -69,6 +71,7 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnAgeWise = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         OverallJPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -76,12 +79,17 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         AreawiseJPanel = new javax.swing.JPanel();
         btnAreaWiseReport = new javax.swing.JButton();
-        btnAgeWise = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 204, 204));
-        setPreferredSize(new java.awt.Dimension(1130, 748));
+        setBackground(new java.awt.Color(180, 195, 195));
 
-        jLabel3.setBackground(new java.awt.Color(255, 204, 204));
+        btnAgeWise.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+        btnAgeWise.setText("SHOW REPORT");
+        btnAgeWise.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgeWiseActionPerformed(evt);
+            }
+        });
+
         jLabel3.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("PATIENT ANALYSIS");
@@ -120,14 +128,6 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnAgeWise.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
-        btnAgeWise.setText("SHOW REPORT");
-        btnAgeWise.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgeWiseActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -138,7 +138,7 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnBack)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnAreaWiseReport)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -149,7 +149,7 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
                                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(OverallJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(btnAgeWise))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,9 +170,58 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgeWise, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAreaWiseReport, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgeWiseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgeWiseActionPerformed
+        // TODO add your handling code here:
+
+        ArrayList<WorkRequest> requestList = new ArrayList<WorkRequest>();
+        Organization org = null;
+
+        for (Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()) {
+            if (e.getEnterpriseType().equals(e.getEnterpriseType().Hospital)) {
+                for (Organization organization : e.getOrganizationDirectory().getOrganizationList()) {
+                    if (organization instanceof DoctorOrganization) {
+                        for (WorkRequest request : organization.getWorkQueue().getWorkRequestList()) {
+                            requestList.add(request);
+                        }
+                    }
+                }
+            }
+        }
+
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        DefaultCategoryDataset dcd = new DefaultCategoryDataset();
+        for (WorkRequest request : requestList) {
+            HealthDoctorWorkRequest r = (HealthDoctorWorkRequest) request;
+            if (map.containsKey(r.getPatientType())) {
+                int oldCount = map.get(r.getPatientType());
+                int newCount = oldCount + r.getTotalPatients();
+                map.put(r.getPatientType(), newCount);
+            } else {
+                map.put(r.getPatientType(), r.getTotalPatients());
+            }
+        }
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            dcd.setValue(entry.getValue(), "Number", entry.getKey());
+        }
+
+        JFreeChart jchart = ChartFactory.createBarChart("Agewise Patient Distribution", "Age Group", "Number", dcd, PlotOrientation.VERTICAL, true, true, false);
+        CategoryPlot cplot = jchart.getCategoryPlot();
+        cplot.setRangeGridlinePaint(Color.black);
+//        ((BarRenderer) cplot.getRenderer()).setBarPainter(new StandardBarPainter());
+        BarRenderer r = (BarRenderer) jchart.getCategoryPlot().getRenderer();
+        r.setSeriesPaint(0, Color.orange);
+
+        ChartPanel chartPanel = new ChartPanel(jchart);
+
+        OverallJPanel.removeAll();
+        OverallJPanel.add(chartPanel);
+        OverallJPanel.updateUI();
+    }//GEN-LAST:event_btnAgeWiseActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -218,7 +267,7 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
         JFreeChart jchart = ChartFactory.createBarChart("Doctor-Patient Distribution", "Doctor Type", "Number", dcd, PlotOrientation.VERTICAL, true, true, false);
         CategoryPlot cplot = jchart.getCategoryPlot();
         cplot.setRangeGridlinePaint(Color.black);
-        //        ((BarRenderer) cplot.getRenderer()).setBarPainter(new StandardBarPainter());
+//        ((BarRenderer) cplot.getRenderer()).setBarPainter(new StandardBarPainter());
         BarRenderer r = (BarRenderer) jchart.getCategoryPlot().getRenderer();
         r.setSeriesPaint(0, Color.orange);
 
@@ -229,55 +278,15 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
         AreawiseJPanel.updateUI();
     }//GEN-LAST:event_btnAreaWiseReportActionPerformed
 
-    private void btnAgeWiseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgeWiseActionPerformed
-        // TODO add your handling code here:
-
-        ArrayList<WorkRequest> requestList = new ArrayList<WorkRequest>();
-        Organization org = null;
-
-        for (Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()) {
-            if (e.getEnterpriseType().equals(e.getEnterpriseType().Hospital)) {
-                for (Organization organization : e.getOrganizationDirectory().getOrganizationList()) {
-                    if (organization instanceof DoctorOrganization) {
-                        for (WorkRequest request : organization.getWorkQueue().getWorkRequestList()) {
-                            requestList.add(request);
-                        }
-                    }
-                }
-            }
-        }
-
-        Map<String, Integer> map = new HashMap<String, Integer>();
-        DefaultCategoryDataset dcd = new DefaultCategoryDataset();
-        for (WorkRequest request : requestList) {
-            HealthDoctorWorkRequest r = (HealthDoctorWorkRequest) request;
-            if (map.containsKey(r.getPatientType())) {
-                int oldCount = map.get(r.getPatientType());
-                int newCount = oldCount + r.getTotalPatients();
-                map.put(r.getPatientType(), newCount);
-            } else {
-                map.put(r.getPatientType(), r.getTotalPatients());
-            }
-        }
-
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            dcd.setValue(entry.getValue(), "Number", entry.getKey());
-        }
-
-        JFreeChart jchart = ChartFactory.createBarChart("Agewise Patient Distribution", "Age Group", "Number", dcd, PlotOrientation.VERTICAL, true, true, false);
-        CategoryPlot cplot = jchart.getCategoryPlot();
-        cplot.setRangeGridlinePaint(Color.black);
-        //        ((BarRenderer) cplot.getRenderer()).setBarPainter(new StandardBarPainter());
-        BarRenderer r = (BarRenderer) jchart.getCategoryPlot().getRenderer();
-        r.setSeriesPaint(0, Color.orange);
-
-        ChartPanel chartPanel = new ChartPanel(jchart);
-
-        OverallJPanel.removeAll();
-        OverallJPanel.add(chartPanel);
-        OverallJPanel.updateUI();
-    }//GEN-LAST:event_btnAgeWiseActionPerformed
-
+//    private ArrayList<String> findAllUniqueAreas(ArrayList<WorkRequest> requestList){
+//        ArrayList<String> areas = new ArrayList<String>();
+//        for(WorkRequest request: requestList){
+//            HealthPharmacyWorkRequest r = (HealthPharmacyWorkRequest) request;
+//            if(!(areas.contains(r.getArea())))
+//                areas.add(r.getArea());
+//        }
+//        return areas;
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AreawiseJPanel;
