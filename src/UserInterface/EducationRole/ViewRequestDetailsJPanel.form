@@ -46,7 +46,10 @@
                               <Component id="jobTitleJTextField" alignment="0" max="32767" attributes="0"/>
                               <Component id="numberOfVolunteersJTextField" alignment="0" max="32767" attributes="0"/>
                               <Component id="numberOfStudentsJTextField" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+<<<<<<< HEAD
                               <Component id="volunteeringDate" alignment="0" max="32767" attributes="0"/>
+=======
+>>>>>>> main
                           </Group>
                       </Group>
                   </Group>
@@ -75,7 +78,11 @@
               <Component id="btnBack" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
+<<<<<<< HEAD
           <Component id="jLabel10" alignment="0" pref="984" max="32767" attributes="0"/>
+=======
+          <Component id="jLabel10" alignment="0" max="32767" attributes="0"/>
+>>>>>>> main
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -91,6 +98,7 @@
                   <Component id="jobTitleJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+<<<<<<< HEAD
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
@@ -138,6 +146,50 @@
                   <Component id="volunteeringDate" min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="398" max="32767" attributes="0"/>
+=======
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="volunteeringTime" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="placeJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="areaJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="numberOfVolunteersJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="numberOfStudentsJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="numberOfHoursJTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnUpdate" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="btnSave" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="132" max="32767" attributes="0"/>
+>>>>>>> main
           </Group>
       </Group>
     </DimensionLayout>
@@ -351,6 +403,7 @@
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="JSpinner.DateEditor de = new JSpinner.DateEditor(volunteeringTime, &quot;HH:mm&quot;);&#xa;volunteeringTime.setEditor(de);"/>
       </AuxValues>
     </Component>
+<<<<<<< HEAD
     <Component class="com.toedter.calendar.JDateChooser" name="volunteeringDate">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
@@ -359,5 +412,7 @@
         </Property>
       </Properties>
     </Component>
+=======
+>>>>>>> main
   </SubComponents>
 </Form>

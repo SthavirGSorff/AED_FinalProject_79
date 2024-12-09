@@ -19,13 +19,20 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import UserInterface.EducationRole.EducationDepartmentWorkAreaJPanel;
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 /**
  *
  * @author sthavir
  */
 public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> main
     private JPanel userProcessContainer;
     private UserAccount userAccount;
     private Volunteer volunteer;
@@ -39,9 +46,15 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         populateUserDetails();
     }
+<<<<<<< HEAD
 
     public void populateUserDetails() {
 
+=======
+    
+    public void populateUserDetails(){
+        
+>>>>>>> main
         nameTextJField.setText(userAccount.getEmployee().getName());
         genderJCombo.setSelectedItem(userAccount.getEmployee().getGender());
         LocalDate dob = userAccount.getEmployee().getBirthDate();
@@ -52,6 +65,10 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         emailIDTextJField.setText(userAccount.getEmployee().getEmailID());
         contactNumberTextJField.setText(userAccount.getEmployee().getContactNumber());
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
         addressjTextArea1.setText(userAccount.getVolunteer().getAddress());
         cityTextJField.setText(userAccount.getVolunteer().getCity());
         pincodeTextJField.setText(userAccount.getVolunteer().getPinCode());
@@ -61,6 +78,7 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         populateLang();
         populateEducation();
 
+<<<<<<< HEAD
         if (userAccount.getVolunteer().getExpertiseList().contains("MS Word")) {
             wordjCheckBox.setSelected(true);
         }
@@ -91,6 +109,39 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         educationjTextArea.setText("");
         int count = 1;
         for (Map.Entry<String, String> entry : userAccount.getVolunteer().getEducationMap().entrySet()) {
+=======
+
+        if(userAccount.getVolunteer().getExpertiseList().contains("MS Word")){
+            wordjCheckBox.setSelected(true);
+        }
+        if(userAccount.getVolunteer().getExpertiseList().contains("MS Excel")){
+            exceljCheckBox.setSelected(true);
+        }
+        if(userAccount.getVolunteer().getExpertiseList().contains("PowerPoint")){
+            pptjCheckBox.setSelected(true);
+        }
+        if(userAccount.getVolunteer().getExpertiseList().contains("Web Browsing")){
+            webjCheckBox.setSelected(true);
+        }
+        if(userAccount.getVolunteer().getExpertiseList().contains("Email Checking")){
+            emailjCheckBox.setSelected(true);
+        }          
+    }
+    
+    private void populateLang(){
+        
+        languagejTextArea.setText("");
+        for(String lang: userAccount.getVolunteer().getLanguageList()){
+                 languagejTextArea.append(lang + "\n");
+        }
+    }
+    
+    private void populateEducation(){
+        
+        educationjTextArea.setText("");
+        int count = 1;
+        for(Map.Entry<String,String> entry : userAccount.getVolunteer().getEducationMap().entrySet()){
+>>>>>>> main
             educationjTextArea.append(count + ".  " + entry.getKey() + " " + entry.getValue() + "\n");
             count++;
         }
@@ -114,6 +165,10 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         btnUpdate = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
+<<<<<<< HEAD
+=======
+        DOBDate = new com.toedter.calendar.JDateChooser();
+>>>>>>> main
         englishJCombo = new javax.swing.JComboBox();
         jLabel8 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -156,7 +211,10 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         addEducationjButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         genderJCombo = new javax.swing.JComboBox();
+<<<<<<< HEAD
         DOBDate = new com.toedter.calendar.JDateChooser();
+=======
+>>>>>>> main
 
         setBackground(new java.awt.Color(255, 204, 204));
         setPreferredSize(new java.awt.Dimension(1141, 944));
@@ -206,6 +264,12 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel18.setText("English: ");
 
+<<<<<<< HEAD
+=======
+        DOBDate.setEnabled(false);
+        DOBDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+
+>>>>>>> main
         englishJCombo.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         englishJCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Excelent", "Good", "Working" }));
         englishJCombo.setEnabled(false);
@@ -422,15 +486,19 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< HEAD
         DOBDate.setEnabled(false);
         DOBDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
 
+=======
+>>>>>>> main
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -522,6 +590,97 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnBack)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+=======
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel10)
+                                .addComponent(jLabel13))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(genderJCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGap(3, 3, 3)
+                                        .addComponent(nameTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(DOBDate, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nationalityTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(contactNumberTextJField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                                    .addComponent(emailIDTextJField, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(pincodeTextJField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                                    .addComponent(cityTextJField, javax.swing.GroupLayout.Alignment.LEADING))))
+                        .addComponent(jLabel4)
+                        .addComponent(jLabel1)
+                        .addComponent(jLabel3)
+                        .addComponent(jLabel2))
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel18)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnUpdate)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSave))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))
+                        .addGap(39, 39, 39)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DegreeTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(schoolTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(educationJCombo1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel19))
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(121, 121, 121)
+                                        .addComponent(addEducationjButton))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(languageJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(55, 55, 55)
+                                        .addComponent(addLanguagejButton))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(pptjCheckBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(wordjCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(exceljCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(emailjCheckBox)
+                                    .addComponent(webjCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(englishJCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnBack)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> main
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -545,10 +704,17 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel2)
                             .addComponent(genderJCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(15, 15, 15)
+<<<<<<< HEAD
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(DOBDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(DOBDate, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12)
+>>>>>>> main
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(nationalityTextJField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)))
@@ -620,7 +786,11 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel21))))
+<<<<<<< HEAD
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> main
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -635,7 +805,11 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         Component component = componentArray[componentArray.length - 1];
         VolunteerWorkAreaJPanel dwjp = (VolunteerWorkAreaJPanel) component;
         dwjp.populateUserDetails();
+<<<<<<< HEAD
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+=======
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+>>>>>>> main
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
@@ -644,13 +818,21 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         Matcher m = p.matcher(phoneNumber);
         return m.matches();
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> main
     private boolean pincodePatternCheck(String pincode) {
         Pattern p = Pattern.compile("^[0-9]{5}$");
         Matcher m = p.matcher(pincode);
         return m.matches();
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> main
     private boolean emailPatternCheck(String email) {
         Pattern p = Pattern.compile("^(.+)@(\\S+)$");
         Matcher m = p.matcher(email);
@@ -685,25 +867,42 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
 
         String name = nameTextJField.getText();
+<<<<<<< HEAD
         if (name == null || name.equals("")) {
+=======
+        if(name == null || name.equals("")){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Name can't be empty!");
             return;
         }
         userAccount.getEmployee().setName(name);
 
         String gender = (String) genderJCombo.getSelectedItem();
+<<<<<<< HEAD
         if (gender == null || gender.equals("")) {
+=======
+        if(gender == null || gender.equals("")){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Gender type can't be empty!");
             return;
         }
         userAccount.getEmployee().setGender(gender);
 
+<<<<<<< HEAD
         Date DOB = (Date) DOBDate.getDate();
         if (DOB == null) {
             JOptionPane.showMessageDialog(null, "Date of Birth can't be empty!");
             return;
         }
         if (DOB.after(new Date())) {
+=======
+        Date DOB =  (Date) DOBDate.getDate();
+        if(DOB == null){
+            JOptionPane.showMessageDialog(null, "Date of Birth can't be empty!");
+            return;
+        }
+        if(DOB.after(new Date())){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Please select a valid Date of Birth.");
             return;
         }
@@ -711,73 +910,118 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
         userAccount.getEmployee().setBirthDate(dob);
 
         String nationality = nationalityTextJField.getText();
+<<<<<<< HEAD
         if (nationality == null || nationality.equals("")) {
+=======
+        if(nationality == null || nationality.equals("")){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Nationality can't be empty!");
             return;
         }
         userAccount.getEmployee().setNationality(nationality);
 
         String emailID = emailIDTextJField.getText();
+<<<<<<< HEAD
         if (emailID == null || emailID.equals("")) {
             JOptionPane.showMessageDialog(null, "Email ID can't be empty!");
             return;
         }
         if (!emailPatternCheck(emailID)) {
+=======
+        if(emailID == null || emailID.equals("")){
+            JOptionPane.showMessageDialog(null, "Email ID can't be empty!");
+            return;
+        }
+        if(!emailPatternCheck(emailID)){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Please enter a valid Email Id.", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         userAccount.getEmployee().setEmailID(emailID);
 
         String contactNumber = contactNumberTextJField.getText();
+<<<<<<< HEAD
         if (contactNumber == null || contactNumber.equals("")) {
             JOptionPane.showMessageDialog(null, "Contact Number can't be empty!");
             return;
         }
         if (!phonePatternCheck(contactNumber)) {
+=======
+        if(contactNumber == null || contactNumber.equals("")){
+            JOptionPane.showMessageDialog(null, "Contact Number can't be empty!");
+            return;
+        }
+        if(!phonePatternCheck(contactNumber)){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Please enter a valid Phone Number.", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         userAccount.getEmployee().setContactNumber(contactNumber);
 
         String address = addressjTextArea1.getText();
+<<<<<<< HEAD
         if (address == null || address.equals("")) {
+=======
+        if(address == null || address.equals("")){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Address can't be empty!");
             return;
         }
         userAccount.getVolunteer().setAddress(address);
 
         String pincode = pincodeTextJField.getText();
+<<<<<<< HEAD
         if (pincode == null || pincode.equals("")) {
             JOptionPane.showMessageDialog(null, "Pincode can't be empty!");
             return;
         }
         if (!pincodePatternCheck(pincode)) {
+=======
+        if(pincode == null || pincode.equals("")){
+            JOptionPane.showMessageDialog(null, "Pincode can't be empty!");
+            return;
+        }
+        if(!pincodePatternCheck(pincode)){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Please enter a valid Pincode.", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         userAccount.getVolunteer().setPinCode(pincode);
 
         String city = cityTextJField.getText();
+<<<<<<< HEAD
         if (city == null || city.equals("")) {
+=======
+        if(city == null || city.equals("")){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "City can't be empty!");
             return;
         }
         userAccount.getVolunteer().setCity(city);
 
         String english = (String) englishJCombo.getSelectedItem();
+<<<<<<< HEAD
         if (english == null || english.equals("")) {
+=======
+        if(english == null || english.equals("")){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "English type can't be empty!");
             return;
         }
         userAccount.getVolunteer().setEnglishProficency(english);
 
         String skills = skillsjTextArea.getText();
+<<<<<<< HEAD
         if (skills == null || skills.equals("")) {
+=======
+        if(skills == null || skills.equals("")){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Skills can't be empty!");
             return;
         }
         userAccount.getVolunteer().setAdditionalSkills(skills);
 
+<<<<<<< HEAD
         if (wordjCheckBox.isSelected() == true) {
             userAccount.getVolunteer().getExpertiseList().add("MS Word");
         }
@@ -791,6 +1035,21 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
             userAccount.getVolunteer().getExpertiseList().add("Email Checking");
         }
         if (webjCheckBox.isSelected() == true) {
+=======
+        if(wordjCheckBox.isSelected() == true){
+            userAccount.getVolunteer().getExpertiseList().add("MS Word");
+        }
+        if(exceljCheckBox.isSelected() == true){
+            userAccount.getVolunteer().getExpertiseList().add("MS Excel");
+        }
+        if(pptjCheckBox.isSelected() == true){
+            userAccount.getVolunteer().getExpertiseList().add("PowerPoint");
+        }
+        if(emailjCheckBox.isSelected() == true){
+            userAccount.getVolunteer().getExpertiseList().add("Email Checking");
+        }
+        if(webjCheckBox.isSelected() == true){
+>>>>>>> main
             userAccount.getVolunteer().getExpertiseList().add("Web Browsing");
         }
 
@@ -850,7 +1109,11 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
 
     private void educationJCombo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_educationJCombo1ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         if (educationJCombo1.getSelectedItem().equals("Bachelors") || educationJCombo1.getSelectedItem().equals("Masters")) {
+=======
+        if(educationJCombo1.getSelectedItem().equals("Bachelors") || educationJCombo1.getSelectedItem().equals("Masters")){
+>>>>>>> main
             DegreeTextJField.setEditable(true);
         }
     }//GEN-LAST:event_educationJCombo1ActionPerformed
@@ -878,21 +1141,36 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
     private void addEducationjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEducationjButtonActionPerformed
 
         String education = (String) educationJCombo1.getSelectedItem();
+<<<<<<< HEAD
         if (education == null || education.equals("")) {
+=======
+        if(education == null || education.equals("")){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "Education type can't be empty!");
             return;
         }
 
         String school = schoolTextJField.getText();
+<<<<<<< HEAD
         if (school == null || school.equals("")) {
+=======
+        if(school == null || school.equals("")){
+>>>>>>> main
             JOptionPane.showMessageDialog(null, "School/University can't be empty!");
             return;
         }
 
+<<<<<<< HEAD
         if (education.equals("Bachelors") || education.equals("Masters")) {
 
             String degree = DegreeTextJField.getText();
             if (degree == null || degree.equals("")) {
+=======
+        if(education.equals("Bachelors") || education.equals("Masters")) {
+
+            String degree = DegreeTextJField.getText();
+            if(degree == null || degree.equals("")){
+>>>>>>> main
                 JOptionPane.showMessageDialog(null, "Degree can't be empty!");
                 return;
             }
@@ -900,7 +1178,11 @@ public class UpdateVolunteerDeatilsJPanel extends javax.swing.JPanel {
             String sd = school + " [" + degree + "] ";
             userAccount.getVolunteer().getEducationMap().put(education, sd);
             populateEducation();
+<<<<<<< HEAD
         } else if (education.equals("10th") || education.equals("12th")) {
+=======
+        } else if (education.equals("10th") || education.equals("12th")){
+>>>>>>> main
             userAccount.getVolunteer().getEducationMap().put(education, school);
             populateEducation();
         }

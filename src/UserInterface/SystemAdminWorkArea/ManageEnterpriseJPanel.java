@@ -5,11 +5,14 @@
 package UserInterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
+<<<<<<< HEAD
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
+=======
+>>>>>>> main
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 

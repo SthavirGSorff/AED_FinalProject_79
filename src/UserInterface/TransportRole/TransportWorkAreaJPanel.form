@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
+<<<<<<< HEAD
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+=======
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+>>>>>>> main
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -86,6 +90,7 @@
                                   </Group>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+<<<<<<< HEAD
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="assignJButton" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -95,6 +100,15 @@
                                       <Component id="contactjTextField" alignment="0" max="32767" attributes="0"/>
                                       <Component id="pickUpDate" alignment="0" max="32767" attributes="0"/>
                                   </Group>
+=======
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="assignJButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel5" alignment="0" pref="170" max="32767" attributes="0"/>
+                                  <Component id="contactjTextField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pickUpDate" alignment="0" max="32767" attributes="0"/>
+>>>>>>> main
                                   <Component id="deliveryDate" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -126,9 +140,15 @@
                               <Component id="pickUpDate" min="-2" pref="26" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="deliveryDate" min="-2" pref="26" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+=======
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="deliveryDate" min="-2" pref="26" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+>>>>>>> main
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="contactjTextField" max="32767" attributes="0"/>
@@ -283,6 +303,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="contactjTextFieldActionPerformed"/>
               </Events>
             </Component>
+<<<<<<< HEAD
             <Component class="javax.swing.JLabel" name="enterpriseLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -299,6 +320,8 @@
                 <Property name="text" type="java.lang.String" value="&lt;value&gt;"/>
               </Properties>
             </Component>
+=======
+>>>>>>> main
             <Component class="com.toedter.calendar.JDateChooser" name="pickUpDate">
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -315,6 +338,25 @@
                 </Property>
               </Properties>
             </Component>
+<<<<<<< HEAD
+=======
+            <Component class="javax.swing.JLabel" name="enterpriseLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name=".AppleSystemUIFont" size="16" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="EnterPrise -"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="valueLabel">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name=".AppleSystemUIFont" size="16" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&lt;value&gt;"/>
+              </Properties>
+            </Component>
+>>>>>>> main
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel2">

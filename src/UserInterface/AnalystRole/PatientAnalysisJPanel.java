@@ -39,7 +39,6 @@ import org.jfree.chart.renderer.category.StandardBarPainter;
  * @author sthavir
  */
 public class PatientAnalysisJPanel extends javax.swing.JPanel {
-
     private JPanel userProcessContainer;
     private AnalyticsOrganization organization;
     private Enterprise enterprise;

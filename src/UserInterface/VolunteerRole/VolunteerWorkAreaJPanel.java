@@ -202,6 +202,10 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         numberOfVolunteersJTextField1 = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
+<<<<<<< HEAD
+=======
+        volunteeringDate1 = new com.toedter.calendar.JDateChooser();
+>>>>>>> main
         Date date = new Date();
         SpinnerDateModel sm1 = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         volunteeringTime1 = new javax.swing.JSpinner(sm1);
@@ -212,11 +216,18 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel27 = new javax.swing.JLabel();
         areaJTextField1 = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
+<<<<<<< HEAD
         volunteeringDate1 = new com.toedter.calendar.JDateChooser();
+=======
+>>>>>>> main
         TasksJPanel = new javax.swing.JPanel();
         numberOfVolunteersJTextField = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         numberOfHoursJTextField = new javax.swing.JTextField();
+<<<<<<< HEAD
+=======
+        volunteeringDate = new com.toedter.calendar.JDateChooser();
+>>>>>>> main
         jLabel14 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         SpinnerDateModel sm = new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
@@ -239,7 +250,10 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         areaJTextField = new javax.swing.JTextField();
+<<<<<<< HEAD
         volunteeringDate = new com.toedter.calendar.JDateChooser();
+=======
+>>>>>>> main
         DonateJPanel = new javax.swing.JPanel();
         txtQuantity = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -518,6 +532,12 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel23.setText("Requirements:");
 
+<<<<<<< HEAD
+=======
+        volunteeringDate1.setEnabled(false);
+        volunteeringDate1.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
+
+>>>>>>> main
         cancelJButton.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
         cancelJButton.setText("Cancel Request");
         cancelJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -545,9 +565,12 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
         jLabel28.setFont(new java.awt.Font(".AppleSystemUIFont", 1, 15)); // NOI18N
         jLabel28.setText("My Tasks");
 
+<<<<<<< HEAD
         volunteeringDate1.setEnabled(false);
         volunteeringDate1.setFont(new java.awt.Font(".AppleSystemUIFont", 0, 14)); // NOI18N
 
+=======
+>>>>>>> main
         javax.swing.GroupLayout rightJPanelLayout = new javax.swing.GroupLayout(rightJPanel);
         rightJPanel.setLayout(rightJPanelLayout);
         rightJPanelLayout.setHorizontalGroup(
@@ -589,9 +612,15 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                                 .addComponent(numberOfStudentsJTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(placeJTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(volunteeringTime1, javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
                                 .addComponent(jobTitleJTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(areaJTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
                                 .addComponent(volunteeringDate1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+=======
+                                .addComponent(volunteeringDate1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jobTitleJTextField1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(areaJTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+>>>>>>> main
                 .addContainerGap(165, Short.MAX_VALUE))
         );
         rightJPanelLayout.setVerticalGroup(
@@ -624,6 +653,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
+<<<<<<< HEAD
                             .addComponent(placeJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -646,6 +676,30 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(jLabel23)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(volunteeringDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
+                            .addComponent(placeJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(volunteeringDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(areaJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel27))
+                .addGap(17, 17, 17)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfStudentsJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfHoursJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(numberOfVolunteersJTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(rightJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel23)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> main
                 .addContainerGap(272, Short.MAX_VALUE))
         );
 
@@ -676,6 +730,12 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< HEAD
+=======
+        volunteeringDate.setEnabled(false);
+        volunteeringDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
+
+>>>>>>> main
         jLabel14.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
         jLabel14.setText("Time: ");
 
@@ -778,9 +838,12 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+<<<<<<< HEAD
         volunteeringDate.setEnabled(false);
         volunteeringDate.setFont(new java.awt.Font(".SF NS Mono", 0, 14)); // NOI18N
 
+=======
+>>>>>>> main
         javax.swing.GroupLayout TasksJPanelLayout = new javax.swing.GroupLayout(TasksJPanel);
         TasksJPanel.setLayout(TasksJPanelLayout);
         TasksJPanelLayout.setHorizontalGroup(
@@ -802,6 +865,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+<<<<<<< HEAD
                         .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                         .addComponent(numberOfHoursJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(areaJTextField, javax.swing.GroupLayout.Alignment.LEADING)
@@ -810,6 +874,16 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                         .addComponent(placeJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(volunteeringDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)))
+=======
+                        .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(numberOfHoursJTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(areaJTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(volunteeringTime, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(volunteeringDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                        .addComponent(jobTitleJTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(placeJTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.Alignment.LEADING)))
+>>>>>>> main
                 .addGap(439, 439, 439))
             .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(TasksJPanelLayout.createSequentialGroup()
@@ -840,6 +914,7 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                     .addComponent(jobTitleJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
                     .addGroup(TasksJPanelLayout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(14, 14, 14)
@@ -872,6 +947,39 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(volunteeringDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(276, Short.MAX_VALUE))
+=======
+                    .addComponent(jLabel13)
+                    .addComponent(volunteeringDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(volunteeringTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(placeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(areaJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel26))
+                .addGap(11, 11, 11)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfStudentsJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numberOfHoursJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(numberOfVolunteersJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(TasksJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(272, Short.MAX_VALUE))
+>>>>>>> main
         );
 
         VolunteerJTabbedPane.addTab("New Tasks", TasksJPanel);
@@ -1073,7 +1181,11 @@ public class VolunteerWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void updateDetailsJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateDetailsJButtonActionPerformed
+<<<<<<< HEAD
         UpdateVolunteerDeatilsJPanel manageEnterpriseAdminJPanel=new UpdateVolunteerDeatilsJPanel(userProcessContainer,userAccount);
+=======
+        UpdateVolunteerDetailsJPanel manageEnterpriseAdminJPanel=new UpdateVolunteerDetailsJPanel(userProcessContainer,userAccount);
+>>>>>>> main
         userProcessContainer.add("manageEnterpriseAdminJPanel",manageEnterpriseAdminJPanel);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
