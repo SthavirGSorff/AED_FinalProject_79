@@ -26,7 +26,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jLabel10" alignment="0" max="32767" attributes="0"/>
           <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
               <EmptySpace pref="342" max="32767" attributes="0"/>
+=======
+              <EmptySpace pref="319" max="32767" attributes="0"/>
+>>>>>>> main
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
@@ -49,11 +53,18 @@
                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                       <Component id="txtNumber" alignment="0" pref="175" max="32767" attributes="0"/>
                       <Component id="TimeSpinner" alignment="0" max="32767" attributes="0"/>
+<<<<<<< HEAD
                       <Component id="DateChooser" alignment="0" pref="175" max="32767" attributes="0"/>
                   </Group>
                   <Component id="txtName" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="342" max="32767" attributes="0"/>
+=======
+                  </Group>
+                  <Component id="txtName" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="318" max="32767" attributes="0"/>
+>>>>>>> main
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
@@ -70,6 +81,7 @@
               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+<<<<<<< HEAD
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -85,6 +97,24 @@
                   <Component id="DateChooser" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+=======
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+>>>>>>> main
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="TimeSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -96,7 +126,11 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="submitBtn" min="-2" pref="37" max="-2" attributes="0"/>
+<<<<<<< HEAD
               <EmptySpace pref="332" max="32767" attributes="0"/>
+=======
+              <EmptySpace pref="322" max="32767" attributes="0"/>
+>>>>>>> main
           </Group>
       </Group>
     </DimensionLayout>
@@ -221,6 +255,7 @@
         <Property name="text" type="java.lang.String" value="Name:"/>
       </Properties>
     </Component>
+<<<<<<< HEAD
     <Component class="com.toedter.calendar.JDateChooser" name="DateChooser">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -228,5 +263,7 @@
         </Property>
       </Properties>
     </Component>
+=======
+>>>>>>> main
   </SubComponents>
 </Form>
