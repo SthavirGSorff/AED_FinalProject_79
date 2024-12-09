@@ -12,7 +12,8 @@ import java.util.Date;
  *
  * @author poojaraghu
  */
-public class EducationVolunteerWorkRequest {
+public class EducationVolunteerWorkRequest extends WorkRequest {
+    
     private String jobTitle;
     private Date date;
     private String time;
@@ -111,5 +112,7 @@ public class EducationVolunteerWorkRequest {
         String id = String.valueOf(this.jobTitle);//To change body of generated methods, choose Tools | Templates.
         return id;
     }
+    
+    
     
 }

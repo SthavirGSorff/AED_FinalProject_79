@@ -19,9 +19,9 @@ import UserInterface.PharmacistRole.PharmacistWorkAreaJPanel;
  *
  * @author sthavir
  */
-public class AnalystRole {
-    
-     @Override
+public class AnalystRole extends Role{
+
+    @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Network network, EcoSystem business) {
         return new AnalystWorkAreaJPanel(userProcessContainer,account,(AnalyticsOrganization)organization,enterprise,network, business);
        

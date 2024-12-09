@@ -4,8 +4,10 @@
  */
 package UserInterface.AdminWorkArea;
 
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import java.awt.CardLayout;
 import javax.swing.JPanel;
-
 /**
  *
  * @author poojaraghu

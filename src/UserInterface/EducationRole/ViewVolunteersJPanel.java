@@ -4,17 +4,134 @@
  */
 package UserInterface.EducationRole;
 
+import Business.UserAccount.UserAccount;
+import Business.WorkQueue.EducationVolunteerWorkRequest;
+import java.awt.CardLayout;
+import java.awt.Component;
+import java.time.LocalDate;
+import java.util.Iterator;
+import java.util.Map;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author poojaraghu
  */
 public class ViewVolunteersJPanel extends javax.swing.JPanel {
 
+    
+    private JPanel userProcessContainer;
+    private EducationVolunteerWorkRequest request;
     /**
      * Creates new form ViewVolunteersJPanel
      */
-    public ViewVolunteersJPanel() {
+    public ViewVolunteersJPanel(JPanel userProcessContainer, EducationVolunteerWorkRequest request) {
+        
+        this.userProcessContainer = userProcessContainer;
+        this.request = request;
         initComponents();
+        populateVolunteerTable();
+    }
+
+    private void populateVolunteerTable(){
+        
+        DefaultTableModel model = (DefaultTableModel) volunteerListJTable.getModel();
+       
+        model.setRowCount(0);
+        for (Iterator<UserAccount> it = request.getUsersList().iterator(); it.hasNext();) {
+            UserAccount volunteer = (UserAccount) it.next();
+            Object[] row = new Object[6];
+            row[0] = volunteer;
+            row[1] = volunteer.getEmployee().getGender();
+            
+             LocalDate now = LocalDate.now();
+             LocalDate birthdate = volunteer.getEmployee().getBirthDate();
+             int age = volunteer.getEmployee().calculateAge(birthdate, now);
+             
+            row[2] = age;
+            row[3] = volunteer.getEmployee().getEmailID(); 
+            row[4] = volunteer.getEmployee().getContactNumber();
+            row[5] = volunteer.getEmployee().getNationality();
+            model.addRow(row);
+        }
+    }
+    
+    private void populateBlankDetails(){
+        nameTextJField.setText("");
+        sexTextJField.setText("");
+        ageTextJField.setText("");
+        nationalityTextJField.setText("");
+        emailIDTextJField.setText("");
+        contactNumberTextJField.setText("");
+        addressjTextArea1.setText("");
+        cityTextJField.setText("");
+        pincodeTextJField.setText("");
+        skillsjTextArea.setText("");
+        educationjTextArea.setText("");
+        languageJTextField.setText("");
+        languagejTextArea.setText("");
+        wordjCheckBox.setSelected(false);
+        exceljCheckBox.setSelected(false);
+        pptjCheckBox.setSelected(false);
+        webjCheckBox.setSelected(false);
+        emailjCheckBox.setSelected(false); 
+    }
+    
+    private void populateVolunteerDetails(UserAccount userAccount){
+        
+        nameTextJField.setText(userAccount.getEmployee().getName());
+        sexTextJField.setText(userAccount.getEmployee().getGender());
+
+        LocalDate now = LocalDate.now();
+        LocalDate birthdate = userAccount.getEmployee().getBirthDate();
+        int age = userAccount.getEmployee().calculateAge(birthdate, now);
+        ageTextJField.setText(String.valueOf(age));
+
+        ageTextJField.setText(String.valueOf(age));
+        nationalityTextJField.setText(userAccount.getEmployee().getNationality());
+        emailIDTextJField.setText(userAccount.getEmployee().getEmailID());
+        contactNumberTextJField.setText(userAccount.getEmployee().getContactNumber());
+        addressjTextArea1.setText(userAccount.getVolunteer().getAddress());
+        cityTextJField.setText(userAccount.getVolunteer().getCity());
+        pincodeTextJField.setText(userAccount.getVolunteer().getPinCode());
+        skillsjTextArea.setText(userAccount.getVolunteer().getAdditionalSkills());
+        languageJTextField.setText(userAccount.getVolunteer().getEnglishProficency());
+
+        populateLang(userAccount);
+        populateEducation(userAccount);
+
+        if(userAccount.getVolunteer().getExpertiseList().contains("MS Word")){
+            wordjCheckBox.setSelected(true);
+        }
+        if(userAccount.getVolunteer().getExpertiseList().contains("MS Excel")){
+            exceljCheckBox.setSelected(true);
+        }
+        if(userAccount.getVolunteer().getExpertiseList().contains("PowerPoint")){
+            pptjCheckBox.setSelected(true);
+        }
+        if(userAccount.getVolunteer().getExpertiseList().contains("Web Browsing")){
+            webjCheckBox.setSelected(true);
+        }
+        if(userAccount.getVolunteer().getExpertiseList().contains("Email Checking")){
+            emailjCheckBox.setSelected(true);
+        }
+        
+    }
+    
+     private void populateLang(UserAccount userAccount){
+        for(String lang: userAccount.getVolunteer().getLanguageList()){
+                 languagejTextArea.append(lang + "\n");
+        }
+    }
+    
+    private void populateEducation(UserAccount userAccount){
+        educationjTextArea.setText("");
+        int count = 1;
+        for(Map.Entry<String,String> entry : userAccount.getVolunteer().getEducationMap().entrySet()){
+            educationjTextArea.append(count + ".  " + entry.getKey() + " " + entry.getValue() + "\n");
+            count++;
+        }
     }
 
     /**

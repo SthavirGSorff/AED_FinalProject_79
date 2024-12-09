@@ -374,7 +374,26 @@ public class RequestPharmacyJPanel extends javax.swing.JPanel {
                 .addContainerGap(168, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+     private boolean pinpatternCheck(String phoneNumber) {
+        Pattern p = Pattern.compile("^[0-9]{5}$");
+        Matcher m = p.matcher(phoneNumber);
+        return m.matches();
+    }
+    private boolean phonePatternCheck(String phoneNumber) {
+        Pattern p = Pattern.compile("^[0-9]{10}$");
+        Matcher m = p.matcher(phoneNumber);
+        return m.matches();
+    }
+    
+    private ImageIcon resizeImage(String ImagePath){
+        ImageIcon myImage = new ImageIcon(ImagePath);
+        Image img = myImage.getImage();
+        Image newImage = img.getScaledInstance(45,45, Image.SCALE_SMOOTH);
+        ImageIcon image = new ImageIcon(newImage);
+        return image;
+    }
+    
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
         int selectedRow = tblMedicines.getSelectedRow();

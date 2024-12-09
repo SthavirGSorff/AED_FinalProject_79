@@ -15,9 +15,9 @@ import javax.swing.JPanel;
  *
  * @author sthavir
  */
-public class Role {
+public abstract class Role {
     
-     public enum RoleType{
+    public enum RoleType{
         
         SystemAdmin("System Admin Role"),
         Admin("Admin Role"),

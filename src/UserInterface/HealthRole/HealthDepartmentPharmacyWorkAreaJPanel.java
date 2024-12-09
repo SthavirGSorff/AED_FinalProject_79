@@ -274,7 +274,26 @@ public class HealthDepartmentPharmacyWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap(249, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    public void populateRequestTable() {
+       DefaultTableModel model = (DefaultTableModel) medicineRequestJTable.getModel();
+       model.setRowCount(0);
+       for (Iterator<WorkRequest> it = userAccount.getWorkQueue().getWorkRequestList().iterator(); it.hasNext();) 
+       {
+           WorkRequest workRequest = it.next();
+           if(workRequest instanceof HealthPharmacyWorkRequest){
+           HealthPharmacyWorkRequest request = (HealthPharmacyWorkRequest) workRequest;
+           Object[] row = new Object[5];
+           row[0] = request;
+           row[1] = request.getAddress();
+           row[2] = request.getMedicineList();
+           row[3] = request.getReceiver();
+           row[4] = request.getStatus();
+           model.addRow(row);
+           }
+       }
+    }
+    
     private void refreshTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButtonActionPerformed
 
         populateRequestTable();

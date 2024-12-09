@@ -16,7 +16,7 @@ import UserInterface.VolunteerRole.VolunteerWorkAreaJPanel;
  *
  * @author sthavir
  */
-public class TransportRole {
+public class TransportRole extends Role{
     
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise,Network network, EcoSystem business) {
@@ -26,7 +26,7 @@ public class TransportRole {
     
     @Override
     public String toString() {
-        return Role.RoleType.Transport.getValue();
+        return RoleType.Transport.getValue();
     }
     
 }

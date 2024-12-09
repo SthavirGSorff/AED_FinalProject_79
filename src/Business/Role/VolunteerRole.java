@@ -17,7 +17,9 @@ import UserInterface.VolunteerRole.VolunteerWorkAreaJPanel;
  *
  * @author sthavir
  */
-public class VolunteerRole {
+public class VolunteerRole extends Role {
+    
+   
     
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise,Network network, EcoSystem business) {
@@ -27,7 +29,7 @@ public class VolunteerRole {
     
      @Override
     public String toString() {
-        return Role.RoleType.Volunteer.getValue();
+        return RoleType.Volunteer.getValue();
     }
     
 }

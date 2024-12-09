@@ -4,6 +4,20 @@
  */
 package UserInterface.AdminWorkArea;
 
+import Business.Employee.Employee;
+import Business.Employee.Volunteer;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
+import static Business.Organization.Organization.Type.Volunteer;
+import Business.Role.Role;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import org.mindrot.jbcrypt.BCrypt;
 /**
  *
  * @author poojaraghu
@@ -13,10 +27,54 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageUserAccountJPanel
      */
-    public ManageUserAccountJPanel() {
+    
+    private JPanel container;
+    private Enterprise enterprise;
+
+    public ManageUserAccountJPanel(JPanel container, Enterprise enterprise) {
         initComponents();
+        this.enterprise = enterprise;
+        this.container = container;
+        populateOrganizationComboBox();
+        populateData();
     }
 
+    public void populateOrganizationComboBox() {
+        organizationJComboBox.removeAllItems();
+
+        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+            organizationJComboBox.addItem(organization);
+        }
+    }
+    
+    public void populateEmployeeComboBox(Organization organization){
+        employeeJComboBox.removeAllItems();
+        
+        for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
+            employeeJComboBox.addItem(employee);
+        }
+    }
+    
+    private void populateRoleComboBox(Organization organization){
+        roleJComboBox.removeAllItems();
+        for (Role role : organization.getSupportedRole()){
+            roleJComboBox.addItem(role);
+        }
+    }
+
+    public void populateData() {
+        DefaultTableModel model = (DefaultTableModel) userJTable.getModel();
+        model.setRowCount(0);
+        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+            for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
+                Object row[] = new Object[3];
+                row[0] = ua.getUserName();
+                row[1] = ua;
+                row[2] = ua.getRole();
+                ((DefaultTableModel) userJTable.getModel()).addRow(row);
+            }
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -283,7 +341,11 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
             populateRoleComboBox(organization);
         }
     }//GEN-LAST:event_organizationJComboBoxActionPerformed
-
+    private boolean passwordPatternCorrect(String input){
+        Pattern p = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[$#&])[A-Za-z\\d$#*&]{6,}$");
+        Matcher m = p.matcher(input);
+        return m.matches();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;

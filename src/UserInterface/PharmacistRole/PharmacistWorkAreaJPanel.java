@@ -4,11 +4,27 @@
  */
 package UserInterface.PharmacistRole;
 
+import UserInterface.DoctorRole.*;
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.DoctorOrganization;
+import Business.Organization.HealthOrganization;
+import Business.Organization.Organization;
+import Business.Organization.PharmacyOrganization;
+import Business.Organization.TransportOrganization;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.EducationVolunteerWorkRequest;
+import Business.WorkQueue.HealthDoctorWorkRequest;
 import Business.WorkQueue.HealthPharmacyWorkRequest;
 import Business.WorkQueue.WorkRequest;
+import java.awt.CardLayout;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -740,7 +756,11 @@ public class PharmacistWorkAreaJPanel extends javax.swing.JPanel {
         txtAddress.setText("");
         txtNumber.setText("");
     }//GEN-LAST:event_btnRequestActionPerformed
-
+    private boolean phonePatternCheck(String phoneNumber) {
+        Pattern p = Pattern.compile("^[0-9]{10}$");
+        Matcher m = p.matcher(phoneNumber);
+        return m.matches();
+    }
     private void refreshBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtn2ActionPerformed
         populateDeliveryTable();
         txtAddress.setText("");

@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.AnalystRole;
+//import org.jfree.data.category;
 
 import userinterface.HealthRole.*;
 import org.jfree.data.category.DefaultCategoryDataset;
@@ -38,7 +39,6 @@ import org.jfree.chart.renderer.category.StandardBarPainter;
  * @author sthavir
  */
 public class PatientAnalysisJPanel extends javax.swing.JPanel {
-    
     private JPanel userProcessContainer;
     private AnalyticsOrganization organization;
     private Enterprise enterprise;
@@ -187,38 +187,35 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
 
         ArrayList<WorkRequest> requestList = new ArrayList<WorkRequest>();
 
-        for(Enterprise e: network.getEnterpriseDirectory().getEnterpriseList())
-        {
-            if(e.getEnterpriseType().equals(e.getEnterpriseType().Hospital))
-            {
-                for (Organization organization : e.getOrganizationDirectory().getOrganizationList())
-                {
-                    if(organization instanceof DoctorOrganization){
-                        for(WorkRequest request: organization.getWorkQueue().getWorkRequestList())
-                        requestList.add(request);
+        for (Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()) {
+            if (e.getEnterpriseType().equals(e.getEnterpriseType().Hospital)) {
+                for (Organization organization : e.getOrganizationDirectory().getOrganizationList()) {
+                    if (organization instanceof DoctorOrganization) {
+                        for (WorkRequest request : organization.getWorkQueue().getWorkRequestList()) {
+                            requestList.add(request);
+                        }
                     }
                 }
             }
         }
         Map<String, Integer> map = new HashMap<String, Integer>();
         DefaultCategoryDataset dcd = new DefaultCategoryDataset();
-        for(WorkRequest request:requestList){
+        for (WorkRequest request : requestList) {
             HealthDoctorWorkRequest r = (HealthDoctorWorkRequest) request;
-            if(map.containsKey(r.getDoctorType())){
+            if (map.containsKey(r.getDoctorType())) {
                 int oldCount = map.get(r.getDoctorType());
-                int newCount = oldCount+r.getTotalPatients();
+                int newCount = oldCount + r.getTotalPatients();
                 map.put(r.getDoctorType(), newCount);
-            }
-            else{
+            } else {
                 map.put(r.getDoctorType(), r.getTotalPatients());
             }
         }
 
-        for(Map.Entry<String, Integer> entry:map.entrySet()){
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
             dcd.setValue(entry.getValue(), "Number", entry.getKey());
         }
 
-        JFreeChart jchart = ChartFactory.createBarChart("Doctor-Patient Distribution", "Doctor Type", "Number",dcd, PlotOrientation.VERTICAL, true, true, false);
+        JFreeChart jchart = ChartFactory.createBarChart("Doctor-Patient Distribution", "Doctor Type", "Number", dcd, PlotOrientation.VERTICAL, true, true, false);
         CategoryPlot cplot = jchart.getCategoryPlot();
         cplot.setRangeGridlinePaint(Color.black);
         //        ((BarRenderer) cplot.getRenderer()).setBarPainter(new StandardBarPainter());
@@ -238,15 +235,13 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
         ArrayList<WorkRequest> requestList = new ArrayList<WorkRequest>();
         Organization org = null;
 
-        for(Enterprise e: network.getEnterpriseDirectory().getEnterpriseList())
-        {
-            if(e.getEnterpriseType().equals(e.getEnterpriseType().Hospital))
-            {
-                for (Organization organization : e.getOrganizationDirectory().getOrganizationList())
-                {
-                    if(organization instanceof DoctorOrganization){
-                        for(WorkRequest request: organization.getWorkQueue().getWorkRequestList())
-                        requestList.add(request);
+        for (Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()) {
+            if (e.getEnterpriseType().equals(e.getEnterpriseType().Hospital)) {
+                for (Organization organization : e.getOrganizationDirectory().getOrganizationList()) {
+                    if (organization instanceof DoctorOrganization) {
+                        for (WorkRequest request : organization.getWorkQueue().getWorkRequestList()) {
+                            requestList.add(request);
+                        }
                     }
                 }
             }
@@ -254,23 +249,22 @@ public class PatientAnalysisJPanel extends javax.swing.JPanel {
 
         Map<String, Integer> map = new HashMap<String, Integer>();
         DefaultCategoryDataset dcd = new DefaultCategoryDataset();
-        for(WorkRequest request:requestList){
+        for (WorkRequest request : requestList) {
             HealthDoctorWorkRequest r = (HealthDoctorWorkRequest) request;
-            if(map.containsKey(r.getPatientType())){
+            if (map.containsKey(r.getPatientType())) {
                 int oldCount = map.get(r.getPatientType());
-                int newCount = oldCount+r.getTotalPatients();
+                int newCount = oldCount + r.getTotalPatients();
                 map.put(r.getPatientType(), newCount);
-            }
-            else{
+            } else {
                 map.put(r.getPatientType(), r.getTotalPatients());
             }
         }
 
-        for(Map.Entry<String, Integer> entry:map.entrySet()){
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
             dcd.setValue(entry.getValue(), "Number", entry.getKey());
         }
 
-        JFreeChart jchart = ChartFactory.createBarChart("Agewise Patient Distribution", "Age Group", "Number",dcd, PlotOrientation.VERTICAL, true, true, false);
+        JFreeChart jchart = ChartFactory.createBarChart("Agewise Patient Distribution", "Age Group", "Number", dcd, PlotOrientation.VERTICAL, true, true, false);
         CategoryPlot cplot = jchart.getCategoryPlot();
         cplot.setRangeGridlinePaint(Color.black);
         //        ((BarRenderer) cplot.getRenderer()).setBarPainter(new StandardBarPainter());

@@ -3,8 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UserInterface.AnalystRole;
+//import org.jfree.data.category;
 
- import UserInterface.HealthRole.*;
+import UserInterface.HealthRole.*;
 import org.jfree.data.category.DefaultCategoryDataset;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
@@ -40,7 +41,6 @@ import org.jfree.chart.renderer.category.StandardBarPainter;
  * @author sthavir
  */
 public class EducationAnalysisJPanel extends javax.swing.JPanel {
-    
     private JPanel userProcessContainer;
     private AnalyticsOrganization organization;
     private Enterprise enterprise;
@@ -48,14 +48,11 @@ public class EducationAnalysisJPanel extends javax.swing.JPanel {
     private Network network;
     EcoSystem business;
 
+<<<<<<< HEAD
+=======
     
    
 
-    /**
-     * Creates new form EducationAnalysisJPanel
-     */
-    public EducationAnalysisJPanel(JPanel userProcessContainer, UserAccount account,
-            AnalyticsOrganization organization, Enterprise enterprise, EcoSystem business, Network network) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organization = organization;
@@ -153,6 +150,15 @@ public class EducationAnalysisJPanel extends javax.swing.JPanel {
         ArrayList<WorkRequest> requestList = new ArrayList<WorkRequest>();
         Organization org = null;
 
+<<<<<<< HEAD
+        for (Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()) {
+            if (e.getEnterpriseType().equals(e.getEnterpriseType().NGO)) {
+                for (Organization organization : e.getOrganizationDirectory().getOrganizationList()) {
+                    if (organization instanceof VolunteerOrganization) {
+                        for (WorkRequest request : organization.getWorkQueue().getWorkRequestList()) {
+                            requestList.add(request);
+                        }
+=======
         for(Enterprise e: network.getEnterpriseDirectory().getEnterpriseList())
         {
             if(e.getEnterpriseType().equals(e.getEnterpriseType().NGO))
@@ -162,6 +168,7 @@ public class EducationAnalysisJPanel extends javax.swing.JPanel {
                     if(organization instanceof VolunteerOrganization){
                         for(WorkRequest request: organization.getWorkQueue().getWorkRequestList())
                         requestList.add(request);
+>>>>>>> main
                     }
                 }
             }
@@ -170,6 +177,15 @@ public class EducationAnalysisJPanel extends javax.swing.JPanel {
         System.out.println(requestList);
         Map<String, Integer> map = new HashMap<String, Integer>();
         DefaultCategoryDataset dcd = new DefaultCategoryDataset();
+<<<<<<< HEAD
+        for (WorkRequest request : requestList) {
+            EducationVolunteerWorkRequest r = (EducationVolunteerWorkRequest) request;
+            if (map.containsKey(r.getArea())) {
+                int oldCount = map.get(r.getArea());
+                int newCount = oldCount + r.getNumberOfStudents();
+                map.put(r.getArea(), newCount);
+            } else {
+=======
         for(WorkRequest request:requestList){
             EducationVolunteerWorkRequest r = (EducationVolunteerWorkRequest) request;
             if(map.containsKey(r.getArea())){
@@ -178,15 +194,24 @@ public class EducationAnalysisJPanel extends javax.swing.JPanel {
                 map.put(r.getArea(), newCount);
             }
             else{
+>>>>>>> main
                 map.put(r.getArea(), r.getNumberOfStudents());
             }
         }
         System.out.println(map);
+<<<<<<< HEAD
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            dcd.setValue(entry.getValue(), "Number of Students", entry.getKey());
+        }
+
+        JFreeChart jchart = ChartFactory.createBarChart("Areawise Student Distribution", "Area", "Number", dcd, PlotOrientation.VERTICAL, true, true, false);
+=======
         for(Map.Entry<String, Integer> entry:map.entrySet()){
             dcd.setValue(entry.getValue(), "Number of Students", entry.getKey());
         }
 
         JFreeChart jchart = ChartFactory.createBarChart("Areawise Student Distribution", "Area", "Number",dcd, PlotOrientation.VERTICAL, true, true, false);
+>>>>>>> main
         CategoryPlot cplot = jchart.getCategoryPlot();
         cplot.setRangeGridlinePaint(Color.black);
         //        ((BarRenderer) cplot.getRenderer()).setBarPainter(new StandardBarPainter());
@@ -205,6 +230,18 @@ public class EducationAnalysisJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
+<<<<<<< HEAD
+
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private ArrayList<String> findAllUniqueAreas(ArrayList<WorkRequest> requestList) {
+        ArrayList<String> areas = new ArrayList<String>();
+        for (WorkRequest request : requestList) {
+            HealthPharmacyWorkRequest r = (HealthPharmacyWorkRequest) request;
+            if (!(areas.contains(r.getArea()))) {
+                areas.add(r.getArea());
+            }
+=======
         
     }//GEN-LAST:event_btnBackActionPerformed
     
@@ -214,6 +251,7 @@ public class EducationAnalysisJPanel extends javax.swing.JPanel {
             HealthPharmacyWorkRequest r = (HealthPharmacyWorkRequest) request;
             if(!(areas.contains(r.getArea())))
                 areas.add(r.getArea());
+>>>>>>> main
         }
         return areas;
     }

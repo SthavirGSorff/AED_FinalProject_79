@@ -30,7 +30,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnBack" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
+=======
                       <EmptySpace max="32767" attributes="0"/>
+>>>>>>> main
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnAreaWiseReport" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel1" alignment="0" min="-2" pref="434" max="-2" attributes="0"/>
